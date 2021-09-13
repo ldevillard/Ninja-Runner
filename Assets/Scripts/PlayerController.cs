@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     bool inJump;
 
+    public GameObject Weapon; //When shop will be enable, use an array to throw the weapon chosen by the player
+
     //SWIPE SYSTEM
     private Vector2 startTouchPosition;
     private Vector2 currentPosition;
@@ -64,28 +66,12 @@ public class PlayerController : MonoBehaviour
         if (GameManager.Mine.GameStarted)
             Swipe();
 
-        /*if (Input.GetKeyDown(KeyCode.Space) && !inJump && Roof != -1)
-            Jump(JumpForce);
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && Direction == 1)
-            SwitchLeft();
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && Direction == 0)
-            SwitchRight();
-        else
-            ResetAnim();*/
-
         float x = transform.position.x;
         float y = transform.position.y;
         float z = transform.position.z;
 
         if (getTeleport)
             StartCoroutine(Teleporting(x, y, z));
-        /*
-        if (Direction == 0 && x > -3.2f)
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-3f, y, z), 40 * Time.deltaTime);
-        if (Direction == 1 && x < 1.2f)
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(1f, y, z), 40 * Time.deltaTime);
-        */
-
         //Throw a raycast to check if we can jump
         RaycastRoof();
     }
@@ -136,6 +122,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Jump1", false);
         anim.SetBool("Jump2", false);
         anim.SetBool("Flip", false);
+        anim.SetBool("ThrowWeapon", false);
     }
 
     void SwitchLeft()
@@ -188,6 +175,13 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Roll", true);
     }
 
+    void ThrowWeapon()
+    {
+        anim.SetBool("ThrowWeapon", true);
+        GameObject wep = Instantiate(Weapon, trans.parent);
+        wep.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);
+    }
+
     public void Swipe()
     {
          if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -222,6 +216,7 @@ public class PlayerController : MonoBehaviour
                 else if (Distance.y > swipeRange)
                 {
                     Debug.Log("Up");
+                    ThrowWeapon();
                     stopTouch = true;
                 }
                 else if (Distance.y < -swipeRange)

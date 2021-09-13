@@ -14150,6 +14150,7 @@ MonoBehaviour:
   JumpForce: 16
   Direction: 0
   Roof: 0
+  Weapon: {fileID: 648060076043151828, guid: 70710b680cd6845b89da320287d08dc0, type: 3}
   swipeRange: 70
   tapRange: 10
 --- !u!54 &968012558
@@ -15732,6 +15733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameStarted: 0
+  TestPrefab: {fileID: 3958497323845343352, guid: 5876ac2dc273d4a3ab8244c927ac9da0, type: 3}
 --- !u!4 &1265689125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462276, guid: a9fd7d3641b11944ca55dca7b29b828e, type: 3}
