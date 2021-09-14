@@ -8,6 +8,9 @@ public class UIButtons : MonoBehaviour
     public Animator StartButton_Animator;
     public Slider TimeChanger;
     public Text FPS;
+    public Text ScoreText;
+
+    public GameObject ButtonStart;
 
     float fpsCount;
     bool fpsDiplay;
@@ -20,16 +23,26 @@ public class UIButtons : MonoBehaviour
 
     public void StartButton()
     {
-        StartButton_Animator.SetBool("GameStarted", true);
-        GameManager.Mine.GameStarted = true;
+        //StartButton_Animator.SetBool("GameStarted", true);
+        StartingPoint.StartingGame = true;
+        Destroy(ButtonStart);
+        //GameManager.Mine.GameStarted = true;
         //Debug.Log("Start");
     }
 
     void Update()
     {
-        Time.timeScale = TimeChanger.value;
+        //Time.timeScale = TimeChanger.value;
         if (!fpsDiplay)
             StartCoroutine(DisplayFPS());
+
+        if (GameManager.Mine.GameStarted)
+        {
+            ScoreText.gameObject.SetActive(true);
+            ScoreText.text = Score.Mine.ScorePoint + "";
+        }
+        else
+            ScoreText.gameObject.SetActive(false);
     }
 
     IEnumerator DisplayFPS()

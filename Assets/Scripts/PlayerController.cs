@@ -19,7 +19,12 @@ public class PlayerController : MonoBehaviour
 
     bool inJump;
 
+    bool inStarting;
+
     public GameObject Weapon; //When shop will be enable, use an array to throw the weapon chosen by the player
+    public float CDWeapon;
+    float saveCD;
+    bool canAttack;
 
     //SWIPE SYSTEM
     private Vector2 startTouchPosition;
@@ -42,29 +47,20 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody>();
-        Teleport.SetActive(false);
-
-        //Init player position to be on a big roof at start point
-        RaycastRoof();
-
-        if (Roof == -1)
-        {
-            Direction = 0;
-            trans.position = new Vector3(-3, trans.position.y, trans.position.z);
-        }
-        else
-        {
-            Direction = 1;
-            trans.position = new Vector3(1, trans.position.y, trans.position.z);
-        }
+        
 
         getTeleport = false;
+        canAttack = true;
+        inStarting = false;
+        saveCD = CDWeapon;
     }
 
     void Update()
     {
         if (GameManager.Mine.GameStarted)
             Swipe();
+        if (StartingPoint.StartingGame && !inStarting)
+            StartCoroutine(Starting());
 
         float x = transform.position.x;
         float y = transform.position.y;
@@ -74,13 +70,35 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Teleporting(x, y, z));
         //Throw a raycast to check if we can jump
         RaycastRoof();
+        WeaponCD();
+    }
+
+    IEnumerator Starting()
+    {
+        inStarting = true;
+        yield return new WaitForSeconds(0.8f);
+        Render.SetActive(false);
+        transform.position = new Vector3(1, -1, 6.6f);
+        transform.rotation = new Quaternion(0, 0, 0, 0);
+        Render.SetActive(true);
+        InitPoint();
+        if (Roof == 0)
+            transform.position = new Vector3(transform.position.x, -4, transform.position.z);
+        else if (Roof == 1)
+            transform.position = new Vector3(transform.position.x, -1, transform.position.z);
+        Instantiate(Teleport, transform);
+        anim.SetBool("StartGame", true);
+        GameManager.Mine.GameStarted = true;
+        Time.timeScale = 0.6f;
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0.9f;
     }
 
     IEnumerator Teleporting(float x, float y, float z)
     {
         getTeleport = false;
         Render.SetActive(false);
-        Teleport.SetActive(true);
+        Instantiate(Teleport, transform);
         if (Direction == 0)
             transform.position = new Vector3(-3f, y, z);
         else
@@ -113,6 +131,22 @@ public class PlayerController : MonoBehaviour
         }
         else
             Roof = -1;
+    }
+
+    void InitPoint()
+    {
+        RaycastRoof();
+
+        if (Roof == -1)
+        {
+            Direction = 0;
+            trans.position = new Vector3(-3, trans.position.y, trans.position.z);
+        }
+        else
+        {
+            Direction = 1;
+            trans.position = new Vector3(1, trans.position.y, trans.position.z);
+        }
     }
 
     void ResetAnim()
@@ -173,13 +207,28 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Roll2", true);
         else
             anim.SetBool("Roll", true);
+
+    }
+
+    void WeaponCD()
+    {
+        if (!canAttack && CDWeapon > 0)
+            CDWeapon -= Time.deltaTime;
+        else
+        {
+            canAttack = true;
+            CDWeapon = saveCD;
+        }
     }
 
     void ThrowWeapon()
     {
+        if (!canAttack)
+            return;
         anim.SetBool("ThrowWeapon", true);
         GameObject wep = Instantiate(Weapon, trans.parent);
         wep.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);
+        canAttack = false;
     }
 
     public void Swipe()
@@ -216,7 +265,8 @@ public class PlayerController : MonoBehaviour
                 else if (Distance.y > swipeRange)
                 {
                     Debug.Log("Up");
-                    ThrowWeapon();
+                    if (!inJump && Roof != -1)
+                        Jump(JumpForce);
                     stopTouch = true;
                 }
                 else if (Distance.y < -swipeRange)
@@ -245,9 +295,8 @@ public class PlayerController : MonoBehaviour
              {
                 Debug.Log("Tap");
 
-                if (!inJump && Roof != -1)
-                    Jump(JumpForce);
-             }
+                ThrowWeapon();
+            }
              else
                 ResetAnim();
          }

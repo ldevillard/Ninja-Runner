@@ -22,7 +22,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5439898298808424889}
-  - component: {fileID: 3548665247271353148}
+  - component: {fileID: 6484073784327482999}
   m_Layer: 0
   m_Name: Shuriken
   m_TagString: Untagged
@@ -45,7 +45,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3548665247271353148
+--- !u!114 &6484073784327482999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,10 +54,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 648060076043151828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2aa6b7fbd4e04df5b547b841814bedb, type: 3}
+  m_Script: {fileID: 11500000, guid: f25d3f23d9914441db602ed01912d0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 50
+  timeOfLife: 2
 --- !u!1 &5829180445557538600
 GameObject:
   m_ObjectHideFlags: 0

@@ -672,8 +672,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.73, y: 0.13, z: 2.9}
-  m_Center: {x: -14.8, y: 6.21, z: -0.31}
+  m_Size: {x: 8.33, y: 0.13, z: 2.9}
+  m_Center: {x: -15.3, y: 6.21, z: -0.31}
 --- !u!65 &8668271110761340926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3000,6 +3000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Bridge_07
       objectReference: {fileID: 0}
+    - target: {fileID: 147660, guid: 2785a08cbf7168647bd368d6dc28b3d6, type: 3}
+      propertyPath: m_TagString
+      value: SmallRoof
+      objectReference: {fileID: 0}
     - target: {fileID: 402936, guid: 2785a08cbf7168647bd368d6dc28b3d6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3046,7 +3050,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f58eb4014cacded4d89c32b81aa213c1, type: 2}
     - target: {fileID: 64051156679502048, guid: 2785a08cbf7168647bd368d6dc28b3d6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2785a08cbf7168647bd368d6dc28b3d6, type: 3}
