@@ -9303,7 +9303,7 @@ MonoBehaviour:
   Direction: 0
   Roof: 0
   Weapon: {fileID: 648060076043151828, guid: 70710b680cd6845b89da320287d08dc0, type: 3}
-  CDWeapon: 0.5
+  CDWeapon: 0.2
   swipeRange: 70
   tapRange: 5
 --- !u!54 &968012558

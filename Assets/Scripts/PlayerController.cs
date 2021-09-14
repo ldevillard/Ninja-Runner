@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Obstacles")
+        if (collision.collider.tag == "Obstacles" || collision.collider.tag == "Ennemy")
             SceneManager.LoadScene(1);
     }
 
@@ -248,7 +248,7 @@ public class PlayerController : MonoBehaviour
 
                 if (Distance.x < -swipeRange)
                 {
-                    Debug.Log("Left");
+                    //Debug.Log("Left");
 
                     if (Direction == 1)
                         SwitchLeft();
@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (Distance.x > swipeRange)
                 {
-                    Debug.Log("Right");
+                   // Debug.Log("Right");
 
                     if (Direction == 0)
                         SwitchRight();
@@ -264,14 +264,14 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (Distance.y > swipeRange)
                 {
-                    Debug.Log("Up");
+                    //Debug.Log("Up");
                     if (!inJump && Roof != -1)
                         Jump(JumpForce);
                     stopTouch = true;
                 }
                 else if (Distance.y < -swipeRange)
                 {
-                    Debug.Log("Down");
+                    //Debug.Log("Down");
                     DownDash();
                     stopTouch = true;
                 }
@@ -293,7 +293,7 @@ public class PlayerController : MonoBehaviour
 
              if (Mathf.Abs(Distance.x) < tapRange && Mathf.Abs(Distance.y) < tapRange)
              {
-                Debug.Log("Tap");
+                //Debug.Log("Tap");
 
                 ThrowWeapon();
             }

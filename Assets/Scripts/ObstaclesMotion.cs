@@ -11,7 +11,7 @@ public class ObstaclesMotion : MonoBehaviour
 
     void Awake()
     {
-        RandomGenerator();
+        GenerateFirstTime();
     }
 
     void OnTriggerEnter(Collider other)
@@ -29,6 +29,16 @@ public class ObstaclesMotion : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, Time.deltaTime * (-speed) + transform.position.z);
     }
 
+    public void GenerateFirstTime()
+    {
+        int j = Random.Range(0, Moduls.Length);
+
+        for (int i = 0; i < Moduls.Length; i++)
+            Moduls[i].gameObject.SetActive(false);
+
+        Moduls[j].gameObject.SetActive(true);
+    }
+
     public void RandomGenerator()
     {
         int j = Random.Range(0, Moduls.Length);
@@ -37,5 +47,12 @@ public class ObstaclesMotion : MonoBehaviour
             Moduls[i].gameObject.SetActive(false);
 
         Moduls[j].gameObject.SetActive(true);
+        var Enemy = Moduls[j].GetComponent<EnnemyGenerator>();
+        if (Enemy != null && Score.Mine.ScorePoint > 100)
+        {
+            int k = Random.Range(0, 2);
+            if (k == 0)
+                Enemy.GenerateEnnemy();
+        }
     }
 }

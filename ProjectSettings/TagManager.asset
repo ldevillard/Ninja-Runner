@@ -8,6 +8,8 @@ TagManager:
   - SmallRoof
   - BigRoof
   - Roof
+  - Ennemy
+  - Weapon
   layers:
   - Default
   - TransparentFX

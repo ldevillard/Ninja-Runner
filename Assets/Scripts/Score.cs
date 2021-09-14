@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
     static public Score Mine;
 
     public int ScorePoint;
+    int scoreCalculator;
     float counter;
 
     void Start()
@@ -14,6 +15,7 @@ public class Score : MonoBehaviour
         Mine = this;
         counter = 0;
         ScorePoint = 0;
+        scoreCalculator = ScorePoint;
     }
 
     // Update is called once per frame
@@ -27,6 +29,12 @@ public class Score : MonoBehaviour
                 ScorePoint++;
                 counter = 0;
             }
+            if (ScorePoint - 150 > scoreCalculator && Time.timeScale < 1.8f)
+            {
+                scoreCalculator += 150;
+                Time.timeScale += 0.1f;
+            }
         }
+        Debug.Log(Time.timeScale);
     }
 }

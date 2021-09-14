@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     {
         Mine = this;
         GameStarted = false;
-
+        Time.timeScale = 0.9f;
     }
 
     // Update is called once per frame
