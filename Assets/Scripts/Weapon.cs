@@ -8,7 +8,13 @@ public class Weapon : MonoBehaviour
     public float speed;
     public float timeOfLife;
 
-    void Update()
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Ennemy")
+            Destroy(gameObject);
+    }
+
+        void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
