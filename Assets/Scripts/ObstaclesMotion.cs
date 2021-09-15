@@ -48,9 +48,9 @@ public class ObstaclesMotion : MonoBehaviour
 
         Moduls[j].gameObject.SetActive(true);
         var Enemy = Moduls[j].GetComponent<EnnemyGenerator>();
-        if (Enemy != null && Score.Mine.ScorePoint > 100)
+        if (Enemy != null && Score.Mine.ScorePoint > 50)
         {
-            int k = Random.Range(0, 2);
+            int k = Random.Range(0, 3);
             if (k == 0)
                 Enemy.GenerateEnnemy();
         }

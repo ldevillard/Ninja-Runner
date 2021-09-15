@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (GameManager.Mine.GameStarted)
+        {
             Swipe();
+            ComputerInputs();
+        }
         if (StartingPoint.StartingGame && !inStarting)
             StartCoroutine(Starting());
 
@@ -71,6 +74,20 @@ public class PlayerController : MonoBehaviour
         //Throw a raycast to check if we can jump
         RaycastRoof();
         WeaponCD();
+    }
+
+    void ComputerInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Direction == 1)
+            SwitchLeft();
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && Direction == 0)
+            SwitchRight();
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && !inJump && Roof != -1)
+            Jump(JumpForce);
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+            DownDash();
+        else if (Input.GetKeyDown(KeyCode.Space))
+            ThrowWeapon();
     }
 
     IEnumerator Starting()
