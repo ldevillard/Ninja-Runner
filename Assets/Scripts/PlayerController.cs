@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         Instantiate(Teleport, transform);
         anim.SetBool("StartGame", true);
         GameManager.Mine.GameStarted = true;
-        Time.timeScale = 0.6f;
+        Time.timeScale = 0.75f;
         yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0.9f;
     }
