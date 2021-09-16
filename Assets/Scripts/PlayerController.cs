@@ -189,6 +189,7 @@ public class PlayerController : MonoBehaviour
 
     void SwitchLeft()
     {
+        AudioFX.Mine.SFXSwitch();
         Direction = 0;
         getTeleport = true;
         if (Roof == 1)
@@ -197,6 +198,7 @@ public class PlayerController : MonoBehaviour
 
     void SwitchRight()
     {
+        AudioFX.Mine.SFXSwitch();
         Direction = 1;
         getTeleport = true;
         if (Roof == 1)
@@ -253,6 +255,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!canAttack)
             return;
+        AudioFX.Mine.SFXAttack();
         anim.SetBool("ThrowWeapon", true);
         GameObject wep = Instantiate(Weapon, trans.parent);
         wep.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);

@@ -11,6 +11,7 @@ public class UIButtons : MonoBehaviour
     public Text ScoreText;
 
     public GameObject ButtonStart;
+    public GameObject[] Buttons;
 
     float fpsCount;
     bool fpsDiplay;
@@ -23,11 +24,12 @@ public class UIButtons : MonoBehaviour
 
     public void StartButton()
     {
-        //StartButton_Animator.SetBool("GameStarted", true);
         StartingPoint.StartingGame = true;
+
+        for (int i = 0; i < Buttons.Length; i++)
+            Buttons[i].SetActive(false);
+
         Destroy(ButtonStart);
-        //GameManager.Mine.GameStarted = true;
-        //Debug.Log("Start");
     }
 
     void Update()
