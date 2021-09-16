@@ -35,6 +35,5 @@ public class Score : MonoBehaviour
                 Time.timeScale += 0.1f;
             }
         }
-        Debug.Log(Time.timeScale);
     }
 }

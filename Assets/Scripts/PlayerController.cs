@@ -47,7 +47,18 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody>();
-        
+
+        //Load random dance at start
+        int i = Random.Range(0, 2);
+        switch (i)
+        {
+            case 0:
+                anim.SetBool("Dance1", true);
+                break;
+            case 1:
+                anim.SetBool("Dance2", true);
+                break;
+        }
 
         getTeleport = false;
         canAttack = true;

@@ -6,6 +6,7 @@ public class Ennemy : MonoBehaviour
 {
     public Animator anim;
     public GameObject[] Skins;
+    public GameObject Exclamation;
 
     void Start()
     {
@@ -24,6 +25,26 @@ public class Ennemy : MonoBehaviour
                 anim.SetBool("Back", true);
                 break;
         }
+    }
+
+    void Update()
+    {
+        RayCast();    
+    }
+
+    void RayCast()
+    {
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        Debug.DrawRay(pos, Vector3.back * 5, Color.cyan); //Draw a debug cast
+        Ray ray = new Ray(pos, Vector3.back);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Player")
+        {
+            Exclamation.SetActive(true);
+            anim.SetBool("Detect", true);
+        }
+
     }
 
     void OnCollisionEnter(Collision collision)
