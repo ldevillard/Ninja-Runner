@@ -6,8 +6,9 @@ public class AudioFX : MonoBehaviour
 {
     static public AudioFX Mine;
 
-    public AudioClip Switch, Switch2, Jump, Attack;
+    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream;
     public AudioSource SFX;
+    public AudioSource MusicSource;
 
     void Start()
     {
@@ -26,6 +27,21 @@ public class AudioFX : MonoBehaviour
     public void SFXAttack()
     {
         SFX.PlayOneShot(Attack);
+    }
+
+    public void SFXJump()
+    {
+        SFX.PlayOneShot(Jump);
+    }
+
+    public void SFXSpoted()
+    {
+        SFX.PlayOneShot(Spoted);
+    }
+
+    public void SFXKilled()
+    {
+        SFX.PlayOneShot(Scream);
     }
 
 }

@@ -1,0 +1,2292 @@
+fileFormatVersion: 2
+guid: c0151ffcd69b8491497162e3c690b8b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2743386838158343850
+    second: UiBUILDER_0
+  - first:
+      213: -749106650692824192
+    second: UiBUILDER_1
+  - first:
+      213: -6932521242440043915
+    second: UiBUILDER_2
+  - first:
+      213: 4206890334076718155
+    second: UiBUILDER_3
+  - first:
+      213: 4268941441587164484
+    second: UiBUILDER_4
+  - first:
+      213: 1031075388759886342
+    second: UiBUILDER_5
+  - first:
+      213: 2164066847019181107
+    second: UiBUILDER_6
+  - first:
+      213: -1508601035176093172
+    second: UiBUILDER_7
+  - first:
+      213: -5788340977893240474
+    second: UiBUILDER_8
+  - first:
+      213: -2707275530871521174
+    second: UiBUILDER_9
+  - first:
+      213: -6882477156004083224
+    second: UiBUILDER_10
+  - first:
+      213: 7729282019553956203
+    second: UiBUILDER_11
+  - first:
+      213: 8768089406552450560
+    second: UiBUILDER_12
+  - first:
+      213: 5557010151127383834
+    second: UiBUILDER_13
+  - first:
+      213: 8169837558561401651
+    second: UiBUILDER_14
+  - first:
+      213: -1467454308311353363
+    second: UiBUILDER_15
+  - first:
+      213: -2084058147333265805
+    second: UiBUILDER_16
+  - first:
+      213: -8076620192830107200
+    second: UiBUILDER_17
+  - first:
+      213: 365157706895171735
+    second: UiBUILDER_18
+  - first:
+      213: 7578339773544129221
+    second: UiBUILDER_19
+  - first:
+      213: -8412609099167397140
+    second: UiBUILDER_20
+  - first:
+      213: 3854062886427226054
+    second: UiBUILDER_21
+  - first:
+      213: 3527021868001213963
+    second: UiBUILDER_22
+  - first:
+      213: -3635985236987277406
+    second: UiBUILDER_23
+  - first:
+      213: -4696026182941640000
+    second: UiBUILDER_24
+  - first:
+      213: -3503596537922171619
+    second: UiBUILDER_25
+  - first:
+      213: -4488338460714021422
+    second: UiBUILDER_26
+  - first:
+      213: -7878215384284885356
+    second: UiBUILDER_27
+  - first:
+      213: -3729580813023975482
+    second: UiBUILDER_28
+  - first:
+      213: -1520294822681258877
+    second: UiBUILDER_29
+  - first:
+      213: 3684527834924178381
+    second: UiBUILDER_30
+  - first:
+      213: 7064256917869980757
+    second: UiBUILDER_31
+  - first:
+      213: -6349615310485657568
+    second: UiBUILDER_32
+  - first:
+      213: 123838236280045462
+    second: UiBUILDER_33
+  - first:
+      213: -1589440166443661237
+    second: UiBUILDER_34
+  - first:
+      213: 4893695048167198159
+    second: UiBUILDER_35
+  - first:
+      213: -1886263406740416320
+    second: UiBUILDER_36
+  - first:
+      213: 7020119024583958128
+    second: UiBUILDER_37
+  - first:
+      213: -8500682251680860209
+    second: UiBUILDER_38
+  - first:
+      213: 8600108370517709175
+    second: UiBUILDER_39
+  - first:
+      213: -7085514992129330844
+    second: UiBUILDER_40
+  - first:
+      213: 2234459170771729752
+    second: UiBUILDER_41
+  - first:
+      213: -8327724317682860639
+    second: UiBUILDER_42
+  - first:
+      213: -3169628473914644109
+    second: UiBUILDER_43
+  - first:
+      213: -1258259926788505375
+    second: UiBUILDER_44
+  - first:
+      213: 3370995885077080705
+    second: UiBUILDER_45
+  - first:
+      213: 2863734062558989450
+    second: UiBUILDER_46
+  - first:
+      213: 7337787308047931581
+    second: UiBUILDER_47
+  - first:
+      213: 5842102906623676469
+    second: UiBUILDER_48
+  - first:
+      213: 5397007834509895803
+    second: UiBUILDER_49
+  - first:
+      213: -3383718831810072353
+    second: UiBUILDER_50
+  - first:
+      213: 7951094554398431925
+    second: UiBUILDER_51
+  - first:
+      213: -7930717709757245537
+    second: UiBUILDER_52
+  - first:
+      213: -5123711487991800238
+    second: UiBUILDER_53
+  - first:
+      213: 4470900438561155392
+    second: UiBUILDER_54
+  - first:
+      213: -7144618063694040187
+    second: UiBUILDER_55
+  - first:
+      213: 6104175115363993446
+    second: UiBUILDER_56
+  - first:
+      213: 6553382043305493329
+    second: UiBUILDER_57
+  - first:
+      213: -3678815098198860779
+    second: UiBUILDER_58
+  - first:
+      213: 6862586355439584219
+    second: UiBUILDER_59
+  - first:
+      213: 7974288471445519110
+    second: UiBUILDER_60
+  - first:
+      213: 2782057660980265738
+    second: UiBUILDER_61
+  - first:
+      213: -8708415185489391317
+    second: UiBUILDER_62
+  - first:
+      213: -3753246828462047742
+    second: UiBUILDER_63
+  - first:
+      213: -5829035429082433990
+    second: UiBUILDER_64
+  - first:
+      213: 4371417303445045589
+    second: UiBUILDER_65
+  - first:
+      213: 8559050040544086006
+    second: UiBUILDER_66
+  - first:
+      213: 4831787122406098531
+    second: UiBUILDER_67
+  - first:
+      213: -5486405299325583372
+    second: UiBUILDER_68
+  - first:
+      213: 6800528803323834475
+    second: UiBUILDER_69
+  - first:
+      213: -1071020394070919967
+    second: UiBUILDER_70
+  - first:
+      213: -5676867916110302018
+    second: UiBUILDER_71
+  - first:
+      213: 6986891553872685625
+    second: UiBUILDER_72
+  - first:
+      213: 4192610337441993298
+    second: UiBUILDER_73
+  - first:
+      213: 329139953304250850
+    second: UiBUILDER_74
+  - first:
+      213: 9066544080406244735
+    second: UiBUILDER_75
+  - first:
+      213: -3539668702624993641
+    second: UiBUILDER_76
+  - first:
+      213: 4384896113637235565
+    second: UiBUILDER_77
+  - first:
+      213: -3718345997506697221
+    second: UiBUILDER_78
+  - first:
+      213: -6423505435347504001
+    second: UiBUILDER_79
+  - first:
+      213: -7578794864736451349
+    second: UiBUILDER_80
+  - first:
+      213: -2288572796336379058
+    second: UiBUILDER_81
+  - first:
+      213: -3987997920018548371
+    second: UiBUILDER_82
+  - first:
+      213: 2000783307331885613
+    second: UiBUILDER_83
+  - first:
+      213: 5897672853773983282
+    second: UiBUILDER_84
+  - first:
+      213: 8865193515967941405
+    second: UiBUILDER_85
+  - first:
+      213: 2277103175182435551
+    second: UiBUILDER_86
+  - first:
+      213: 3058289348003461400
+    second: UiBUILDER_87
+  - first:
+      213: -2456214711227895998
+    second: UiBUILDER_88
+  - first:
+      213: -7049586525591928070
+    second: UiBUILDER_89
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UiBUILDER_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1844
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651071ea4388de9d0800000000000000
+      internalID: -2743386838158343850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1844
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083529a5873aa95f0800000000000000
+      internalID: -749106650692824192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1844
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572f28af8acbacf90800000000000000
+      internalID: -6932521242440043915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_3
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1844
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ccaa34870e16a30800000000000000
+      internalID: 4206890334076718155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_4
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1844
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4453fb09f935e3b30800000000000000
+      internalID: 4268941441587164484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_5
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 1740
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a4eab6a9d1f4e00800000000000000
+      internalID: 1031075388759886342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_6
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 1741
+        width: 103
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33427c6e45f480e10800000000000000
+      internalID: 2164066847019181107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_7
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 1748
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ada86f95f501be0800000000000000
+      internalID: -1508601035176093172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_8
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1719
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66116dd6c8eabafa0800000000000000
+      internalID: -5788340977893240474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1719
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60cb499f33dd6ad0800000000000000
+      internalID: -2707275530871521174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_10
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1719
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9c2a5dd778c70a0800000000000000
+      internalID: -6882477156004083224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_11
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1719
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61d3589b0de34b60800000000000000
+      internalID: 7729282019553956203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_12
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1719
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006ac642cd28ea970800000000000000
+      internalID: 8768089406552450560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_13
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1728
+        width: 153
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fff274a477e1d40800000000000000
+      internalID: 5557010151127383834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_14
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1728
+        width: 153
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b62be49f7116170800000000000000
+      internalID: 8169837558561401651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_15
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1728
+        width: 154
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de73cfcd41e82abe0800000000000000
+      internalID: -1467454308311353363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_16
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1728
+        width: 154
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37621f42820f313e0800000000000000
+      internalID: -2084058147333265805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_17
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 1728
+        width: 153
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c15d94f9b41aef80800000000000000
+      internalID: -8076620192830107200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_18
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1728
+        width: 204
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790ab7eeffc411500800000000000000
+      internalID: 365157706895171735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_19
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 1741
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2ef4d4fdbab2960800000000000000
+      internalID: 7578339773544129221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_20
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1741
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea88e1a898604b80800000000000000
+      internalID: -8412609099167397140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1599
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfe28786c16c7530800000000000000
+      internalID: 3854062886427226054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_22
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1599
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e3f35b3bf72f030800000000000000
+      internalID: 3527021868001213963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_23
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1599
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af0fc4f0b26a8dc0800000000000000
+      internalID: -3635985236987277406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_24
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1599
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca74d5311d54deb0800000000000000
+      internalID: -4696026182941640000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_25
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1599
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d4cd8f289b06fc0800000000000000
+      internalID: -3503596537922171619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_26
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1589
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddca6143f736b1c0800000000000000
+      internalID: -4488338460714021422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_27
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1589
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e8eab39d4faa290800000000000000
+      internalID: -7878215384284885356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_28
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1589
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7e79eb20edd3cc0800000000000000
+      internalID: -3729580813023975482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_29
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1589
+        width: 148
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384d734e9e3d6eae0800000000000000
+      internalID: -1520294822681258877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_30
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1589
+        width: 149
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbd1bd5b82122330800000000000000
+      internalID: 3684527834924178381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_31
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1596
+        width: 204
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c6cbf1d38490260800000000000000
+      internalID: 7064256917869980757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_32
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 1565
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028ee1e4482a1e7a0800000000000000
+      internalID: -6349615310485657568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_33
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 1596
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f35134836f7b100800000000000000
+      internalID: 123838236280045462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_34
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 1565
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48436ff69c21f9e0800000000000000
+      internalID: -1589440166443661237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_35
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 1598
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd0819e7b5e9e340800000000000000
+      internalID: 4893695048167198159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_36
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1570
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c85b68ec65a2d5e0800000000000000
+      internalID: -1886263406740416320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_37
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 1602
+        width: 80
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ed9450f097c6160800000000000000
+      internalID: 7020119024583958128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_38
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 1576
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc73818d782870a80800000000000000
+      internalID: -8500682251680860209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_39
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1594
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77152966ff8b95770800000000000000
+      internalID: 8600108370517709175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_40
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1576
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4613d63c7a13bad90800000000000000
+      internalID: -7085514992129330844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_41
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1474
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d76f2f6c4620f10800000000000000
+      internalID: 2234459170771729752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_42
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1474
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad7121fadafd6c80800000000000000
+      internalID: -8327724317682860639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_43
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1474
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379aa5642b73304d0800000000000000
+      internalID: -3169628473914644109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_44
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1474
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e089ac5343c98ee0800000000000000
+      internalID: -1258259926788505375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_45
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1474
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18aa25da5ee28ce20800000000000000
+      internalID: 3370995885077080705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_46
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 1565
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cc30a05f60eb720800000000000000
+      internalID: 2863734062558989450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_47
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1358
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8119dedae05d560800000000000000
+      internalID: 7337787308047931581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_48
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1358
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530d49a04a1531150800000000000000
+      internalID: 5842102906623676469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_49
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1358
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7866f9e70606ea40800000000000000
+      internalID: 5397007834509895803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_50
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1358
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0392276ad9a01d0800000000000000
+      internalID: -3383718831810072353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_51
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1358
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba167ade56f75e60800000000000000
+      internalID: 7951094554398431925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_52
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1423
+        width: 126
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f971500034e60f190800000000000000
+      internalID: -7930717709757245537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_53
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1423
+        width: 126
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e19aa5c8be4e8b0800000000000000
+      internalID: -5123711487991800238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_54
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1423
+        width: 126
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0496392d244db0e30800000000000000
+      internalID: 4470900438561155392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_55
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 1423
+        width: 126
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5837da199b739dc90800000000000000
+      internalID: -7144618063694040187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_56
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 1423
+        width: 126
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667cc061de266b450800000000000000
+      internalID: 6104175115363993446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_57
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1447
+        width: 204
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153c5a04f3a42fa50800000000000000
+      internalID: 6553382043305493329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_58
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1212
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c538dc82932fcc0800000000000000
+      internalID: -3678815098198860779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_59
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1212
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd34b644eedcc3f50800000000000000
+      internalID: 6862586355439584219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_60
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1212
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bb00d7d1d5aae60800000000000000
+      internalID: 7974288471445519110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_61
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1212
+        width: 103
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a030263e3badb9620800000000000000
+      internalID: 2782057660980265738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_62
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1212
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 47, y: 45, z: 46, w: 46}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b219948278e752780800000000000000
+      internalID: -8708415185489391317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_63
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1211
+        width: 143
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e782325e9c9ebc0800000000000000
+      internalID: -3753246828462047742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_64
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1211
+        width: 143
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ff5a292b1b1fa0800000000000000
+      internalID: -5829035429082433990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_65
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1211
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55186d070e46aac30800000000000000
+      internalID: 4371417303445045589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_66
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1211
+        width: 145
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f74c610aaad7c670800000000000000
+      internalID: 8559050040544086006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_67
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 1211
+        width: 145
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3668255b9c4fd0340800000000000000
+      internalID: 4831787122406098531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_68
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1313
+        width: 204
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffb0efc27f5cd3b0800000000000000
+      internalID: -5486405299325583372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_69
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1130
+        width: 182
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60fde67ae4506e50800000000000000
+      internalID: 6800528803323834475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_70
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1126
+        width: 92
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4343840a8f221f0800000000000000
+      internalID: -1071020394070919967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_71
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1164
+        width: 204
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4fe6725b6b731b0800000000000000
+      internalID: -5676867916110302018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_72
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1063
+        width: 182
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a22c0a9dc66f060800000000000000
+      internalID: 6986891553872685625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_73
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1059
+        width: 92
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2525cd473e42f2a30800000000000000
+      internalID: 4192610337441993298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_74
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1048
+        width: 450
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9a61e2b07519400800000000000000
+      internalID: 329139953304250850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_75
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 997
+        width: 182
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7de805fdc5d2dd70800000000000000
+      internalID: 9066544080406244735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_76
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 994
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e2875a11290eec0800000000000000
+      internalID: -3539668702624993641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_77
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 933
+        width: 103
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b965e78c74adc30800000000000000
+      internalID: 4384896113637235565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_78
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 934
+        width: 103
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf72e921408c56cc0800000000000000
+      internalID: -3718345997506697221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_79
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 933
+        width: 105
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f743259f6df1bd6a0800000000000000
+      internalID: -6423505435347504001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_80
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 933
+        width: 105
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be444d58936b2d690800000000000000
+      internalID: -7578794864736451349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_81
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 930
+        width: 182
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b6fb7ca2b5d30e0800000000000000
+      internalID: -2288572796336379058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_82
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 926
+        width: 92
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d693c446509c7a8c0800000000000000
+      internalID: -3987997920018548371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_83
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 865
+        width: 104
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a5c0241d534cb10800000000000000
+      internalID: 2000783307331885613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_84
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 865
+        width: 103
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e99aa963eb8d150800000000000000
+      internalID: 5897672853773983282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_85
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 865
+        width: 104
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b8d50788e770b70800000000000000
+      internalID: 8865193515967941405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_86
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 865
+        width: 105
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4c9a1f545e99f10800000000000000
+      internalID: 2277103175182435551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_87
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 864
+        width: 182
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8197b1065f9317a20800000000000000
+      internalID: 3058289348003461400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_88
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 859
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f2c25dbb5c9edd0800000000000000
+      internalID: -2456214711227895998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiBUILDER_89
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 810
+        width: 102
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af286b0c766da2e90800000000000000
+      internalID: -7049586525591928070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: acf7e38360cad4dd2a6d05652ea442ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

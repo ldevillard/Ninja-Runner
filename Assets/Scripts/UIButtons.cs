@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UIButtons : MonoBehaviour
     public Slider TimeChanger;
     public Text FPS;
     public Text ScoreText;
+
+    public Button Settings;
 
     public GameObject ButtonStart;
     public GameObject[] Buttons;
@@ -30,6 +33,11 @@ public class UIButtons : MonoBehaviour
             Buttons[i].SetActive(false);
 
         Destroy(ButtonStart);
+    }
+
+    public void OpenSettings()
+    {
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
     }
 
     void Update()

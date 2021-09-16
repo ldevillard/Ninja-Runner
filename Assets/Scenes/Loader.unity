@@ -626,9 +626,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Switch: {fileID: 8300000, guid: 8e43b6c1b27e449b9a7eb1b644ca6011, type: 3}
   Switch2: {fileID: 8300000, guid: e8e4f14a39026483caf138251680167c, type: 3}
-  Jump: {fileID: 0}
+  Jump: {fileID: 8300000, guid: 56003f9f790544ac3936ad35793577e7, type: 3}
   Attack: {fileID: 8300000, guid: d134543562c234012a3a796d5cae396f, type: 3}
+  Spoted: {fileID: 8300000, guid: d9bbbe994616a471390fedc5b3f72142, type: 3}
+  Scream: {fileID: 8300000, guid: 9d9f0189811654224a02023d0ab7d808, type: 3}
   SFX: {fileID: 1658169571}
+  MusicSource: {fileID: 964925456}
 --- !u!1 &1024218944
 GameObject:
   m_ObjectHideFlags: 0

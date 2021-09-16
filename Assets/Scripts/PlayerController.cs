@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
         else if (Roof == 1)
             transform.position = new Vector3(transform.position.x, -1, transform.position.z);
         Instantiate(Teleport, transform);
+        AudioFX.Mine.SFXSwitch();
         anim.SetBool("StartGame", true);
         GameManager.Mine.GameStarted = true;
         Time.timeScale = 0.75f;
@@ -209,7 +210,7 @@ public class PlayerController : MonoBehaviour
     {
         inJump = true;
         rig.velocity = new Vector3(0, force, 0);
-
+        AudioFX.Mine.SFXJump();
         int i;
 
         if (Roof == 1)

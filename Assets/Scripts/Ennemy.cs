@@ -8,6 +8,9 @@ public class Ennemy : MonoBehaviour
     public GameObject[] Skins;
     public GameObject Exclamation;
 
+    bool Spoted;
+    bool isAlive;
+
     void Start()
     {
         for (int i = 0; i < Skins.Length; i++)
@@ -25,6 +28,9 @@ public class Ennemy : MonoBehaviour
                 anim.SetBool("Back", true);
                 break;
         }
+
+        Spoted = false;
+        isAlive = true;
     }
 
     void Update()
@@ -41,7 +47,13 @@ public class Ennemy : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Player")
         {
-            Exclamation.SetActive(true);
+            if (!Spoted && isAlive)
+            {
+                AudioFX.Mine.SFXSpoted();
+                Spoted = true;
+            }
+            if (isAlive)
+                Exclamation.SetActive(true);
             anim.SetBool("Detect", true);
         }
 
@@ -53,7 +65,9 @@ public class Ennemy : MonoBehaviour
             Destroy(gameObject);
         if (collision.collider.tag == "Weapon")
         {
+            isAlive = false;
             anim.SetBool("Killed", true);
+            AudioFX.Mine.SFXKilled();
             GetComponent<CapsuleCollider>().enabled = false;
             StartCoroutine(Destroy());
         }
