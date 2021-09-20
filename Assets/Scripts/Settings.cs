@@ -6,20 +6,30 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    static public Settings Mine;
+
     public Animator anim;
     public Toggle ToggleFX;
     public Toggle ToggleMusic;
-    public Slider VolumeHandler;
+    public Slider VolumeHandlerMusic;
+    public Slider VolumeHandlerSFX;
 
     void Start()
     {
+        Mine = this;
+
         ToggleFX.isOn = AudioFX.Mine.SFX.enabled;
         ToggleMusic.isOn = AudioFX.Mine.MusicSource.enabled;
-        VolumeHandler.value = AudioFX.Mine.MusicSource.volume;
+        VolumeHandlerMusic.value = AudioFX.Mine.MusicSource.volume;
+        VolumeHandlerSFX.value = AudioFX.Mine.SFX.volume;
+
+        AudioFX.Mine.SFXSettings();
     }
 
     public void QuitSettings()
     {
+        AudioFX.Mine.SFXSettings();
+        SaveManager.Save();
         anim.SetBool("Quit", true);
     }
 
@@ -39,9 +49,13 @@ public class Settings : MonoBehaviour
             AudioFX.Mine.SFX.enabled = false;
     }
 
-    public void VolumeSlider(float value)
+    public void VolumeSliderMusic(float value)
     {
         AudioFX.Mine.MusicSource.volume = value;
+    }
+
+    public void VolumeSliderSFX(float value)
+    {
         AudioFX.Mine.SFX.volume = value;
     }
 }

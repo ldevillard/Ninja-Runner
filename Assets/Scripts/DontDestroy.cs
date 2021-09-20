@@ -11,4 +11,9 @@ public class DontDestroy : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    void Start()
+    {
+        SaveManager.Load("sound");    
+    }
+
 }

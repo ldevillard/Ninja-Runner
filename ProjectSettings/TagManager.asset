@@ -10,6 +10,7 @@ TagManager:
   - Roof
   - Ennemy
   - Weapon
+  - Bounce
   layers:
   - Default
   - TransparentFX

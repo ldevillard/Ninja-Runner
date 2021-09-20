@@ -6,11 +6,11 @@ public class AudioFX : MonoBehaviour
 {
     static public AudioFX Mine;
 
-    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream;
+    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings;
     public AudioSource SFX;
     public AudioSource MusicSource;
 
-    void Start()
+    void Awake()
     {
         Mine = this;
     }
@@ -42,6 +42,11 @@ public class AudioFX : MonoBehaviour
     public void SFXKilled()
     {
         SFX.PlayOneShot(Scream);
+    }
+
+    public void SFXSettings()
+    {
+        SFX.PlayOneShot(OpenSettings);
     }
 
 }

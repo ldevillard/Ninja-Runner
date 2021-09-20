@@ -8,13 +8,14 @@ public class GameManager : MonoBehaviour
 
     public bool GameStarted;
     
-    public GameObject TestPrefab;
 
     void Start()
     {
         Mine = this;
         GameStarted = false;
         Time.timeScale = 0.9f;
+
+        SaveManager.Load("all");
     }
 
     // Update is called once per frame

@@ -630,6 +630,7 @@ MonoBehaviour:
   Attack: {fileID: 8300000, guid: d134543562c234012a3a796d5cae396f, type: 3}
   Spoted: {fileID: 8300000, guid: d9bbbe994616a471390fedc5b3f72142, type: 3}
   Scream: {fileID: 8300000, guid: 9d9f0189811654224a02023d0ab7d808, type: 3}
+  OpenSettings: {fileID: 8300000, guid: db1e08e5e2a10b04b8167b72c8a16b63, type: 3}
   SFX: {fileID: 1658169571}
   MusicSource: {fileID: 964925456}
 --- !u!1 &1024218944
