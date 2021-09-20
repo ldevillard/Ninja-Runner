@@ -40,6 +40,19 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.tag == "Obstacles" || collision.collider.tag == "Ennemy")
             SceneManager.LoadScene(1);
+        else if (!(collision.collider.tag == "SmallRoof" || collision.collider.tag == "BigRoof"))
+            AudioFX.Mine.RunSource.volume = 0;
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "SmallRoof" || collision.collider.tag == "BigRoof")
+            AudioFX.Mine.RunSource.volume = AudioFX.Mine.SFX.volume;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        AudioFX.Mine.RunSource.volume = 0;
     }
 
     void Start()

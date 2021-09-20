@@ -47,6 +47,7 @@ public class ObstaclesMotion : MonoBehaviour
             Moduls[i].gameObject.SetActive(false);
 
         Moduls[j].gameObject.SetActive(true);
+
         var Enemy = Moduls[j].GetComponent<EnnemyGenerator>();
         if (Enemy != null && Score.Mine.ScorePoint > 10)
         {
@@ -54,5 +55,7 @@ public class ObstaclesMotion : MonoBehaviour
             if (k == 0)
                 Enemy.GenerateEnnemy();
         }
+
+        Moduls[j].GetComponent<CoinsGenerator>().GenerateCoins();
     }
 }

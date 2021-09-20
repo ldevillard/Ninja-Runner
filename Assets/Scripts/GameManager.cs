@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     static public GameManager Mine;
 
     public bool GameStarted;
-    
+    public Material mat;
+    public Material[] Skyboxs;
+
 
     void Start()
     {
@@ -15,11 +17,15 @@ public class GameManager : MonoBehaviour
         GameStarted = false;
         Time.timeScale = 0.9f;
 
+        RenderSettings.skybox = mat;
+        GenerateSkybox();
         SaveManager.Load("all");
     }
 
-    // Update is called once per frame
-    void Update()
+    void GenerateSkybox()
     {
+        int i = Random.Range(0, Skyboxs.Length);
+        RenderSettings.skybox = Skyboxs[i];
+        //Debug.Log(i);
     }
 }

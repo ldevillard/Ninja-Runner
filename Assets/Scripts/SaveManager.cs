@@ -40,6 +40,7 @@ public class SaveManager : MonoBehaviour
                 AudioFX.Mine.SFX.volume = saver.SFXVol;
                 AudioFX.Mine.MusicSource.enabled = saver.MusicIsOn;
                 AudioFX.Mine.SFX.enabled = saver.SFXIsOn;
+                AudioFX.Mine.RunSource.enabled = saver.SFXIsOn;
             }
 
             Debug.Log("Successful to load!");

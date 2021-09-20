@@ -6,13 +6,22 @@ public class AudioFX : MonoBehaviour
 {
     static public AudioFX Mine;
 
-    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings;
+    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano;
+    public AudioClip[] Coins;
     public AudioSource SFX;
     public AudioSource MusicSource;
+    public AudioSource RunSource;
 
     void Awake()
     {
         Mine = this;
+        RunSource.volume = 0;
+    }
+
+    void FixedUpdate()
+    {
+        if (!RunSource.isPlaying)
+            RunSource.PlayOneShot(Run);
     }
 
     public void SFXSwitch()
@@ -47,6 +56,17 @@ public class AudioFX : MonoBehaviour
     public void SFXSettings()
     {
         SFX.PlayOneShot(OpenSettings);
+    }
+
+    public void SFXVolcano()
+    {
+        SFX.PlayOneShot(Volcano);
+    }
+
+    public void SFXCoins()
+    {
+        int i = Random.Range(0, Coins.Length);
+        SFX.PlayOneShot(Coins[i]);
     }
 
 }

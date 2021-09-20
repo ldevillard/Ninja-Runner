@@ -44,9 +44,15 @@ public class Settings : MonoBehaviour
     public void SFXToggle(bool newValue)
     {
         if (newValue)
+        {
             AudioFX.Mine.SFX.enabled = true;
+            AudioFX.Mine.RunSource.enabled = true;
+        }
         else
+        {
             AudioFX.Mine.SFX.enabled = false;
+            AudioFX.Mine.RunSource.enabled = false;
+        }
     }
 
     public void VolumeSliderMusic(float value)
