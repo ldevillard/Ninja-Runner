@@ -8,6 +8,9 @@ public class Ennemy : MonoBehaviour
     public GameObject[] Skins;
     public GameObject Exclamation;
 
+    public GameObject Effect;
+    public GameObject DiscreteEffect;
+
     bool Spoted;
     bool isAlive;
 
@@ -66,6 +69,17 @@ public class Ennemy : MonoBehaviour
         if (collision.collider.tag == "Weapon")
         {
             isAlive = false;
+
+            GameObject FX = Instantiate(Effect, transform);
+            FX.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+
+            if (!Spoted)
+            {
+                GameObject DisFX = Instantiate(DiscreteEffect, transform);
+                DisFX.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+                AudioFX.Mine.SFXDiscreteKill();
+            }
+
             anim.SetBool("Killed", true);
             AudioFX.Mine.SFXKilled();
             GetComponent<CapsuleCollider>().enabled = false;

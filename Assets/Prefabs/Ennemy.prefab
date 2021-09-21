@@ -53,6 +53,8 @@ MonoBehaviour:
   - {fileID: 8049138237240396511}
   - {fileID: 8049138237240314619}
   Exclamation: {fileID: 9125831179424964399}
+  Effect: {fileID: 4787146697146794734, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
+  DiscreteEffect: {fileID: 7888857835762348946, guid: 84dab4a8cf751fc4181b5f09a6186c21, type: 3}
 --- !u!136 &8814853459512645490
 CapsuleCollider:
   m_ObjectHideFlags: 0

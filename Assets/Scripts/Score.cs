@@ -7,6 +7,8 @@ public class Score : MonoBehaviour
     static public Score Mine;
 
     public int ScorePoint;
+    public int CoinPoint;
+
     int scoreCalculator;
     float counter;
 

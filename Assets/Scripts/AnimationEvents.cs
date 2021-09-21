@@ -9,4 +9,16 @@ public class AnimationEvents : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(3);
     }
+
+    public void Disable()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void ResetAnim()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("Taken", false);
+    }
+
 }

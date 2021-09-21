@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    static public PlayerController Mine;
+
     private Animator anim;
     private Transform trans;
     private Rigidbody rig;
@@ -36,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public float tapRange;
     //
 
+    public GameObject CoinEffect;
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Obstacles" || collision.collider.tag == "Ennemy")
@@ -57,6 +61,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Mine = this;
+
         anim = GetComponent<Animator>();
         trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody>();
@@ -274,6 +280,12 @@ public class PlayerController : MonoBehaviour
         GameObject wep = Instantiate(Weapon, trans.parent);
         wep.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);
         canAttack = false;
+    }
+
+    public void GenerateCoinFX()
+    {
+        GameObject FX = Instantiate(CoinEffect, transform);
+        FX.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f , transform.position.z);
     }
 
     public void Swipe()

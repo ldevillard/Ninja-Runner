@@ -634,6 +634,7 @@ MonoBehaviour:
   OpenSettings: {fileID: 8300000, guid: db1e08e5e2a10b04b8167b72c8a16b63, type: 3}
   Run: {fileID: 8300000, guid: 7208116e492c9437dabab2f3a36c23f1, type: 3}
   Volcano: {fileID: 8300000, guid: 895fc3b20cb2345e39679b0387e14b7c, type: 3}
+  DiscreteKill: {fileID: 8300000, guid: 3f330ac906ec7f546b6a12a0ef41c7ae, type: 3}
   Coins:
   - {fileID: 8300000, guid: 977af99516704e04492fcfdb828fbc56, type: 3}
   - {fileID: 8300000, guid: 5b4a89a04adab6c47bc7b0f96e1ac05b, type: 3}
