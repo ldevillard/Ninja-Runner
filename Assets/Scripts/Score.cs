@@ -6,8 +6,8 @@ public class Score : MonoBehaviour
 {
     static public Score Mine;
 
-    public int ScorePoint;
-    public int CoinPoint;
+    static public int ScorePoint;
+    static public int CoinPoint;
 
     int scoreCalculator;
     float counter;
@@ -37,5 +37,12 @@ public class Score : MonoBehaviour
                 Time.timeScale += 0.1f;
             }
         }
+    }
+
+    public void AddCoins(int quantity)
+    {
+        CoinPoint += quantity;
+        UIButtons.Mine.animCoin();
+        SaveManager.Save();
     }
 }

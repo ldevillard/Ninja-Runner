@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
+    static public UIButtons Mine;
+
     public Animator StartButton_Animator;
     public Slider TimeChanger;
     public Text FPS;
@@ -16,13 +18,20 @@ public class UIButtons : MonoBehaviour
     public GameObject ButtonStart;
     public GameObject[] Buttons;
 
+    public GameObject CanvasObject;
+    public Text CoinsText;
+    public Animator CoinsAnim;
+
     float fpsCount;
     bool fpsDiplay;
 
     void Start()
     {
+        Mine = this;
+
         TimeChanger.value = 0.9f;
         fpsDiplay = false;
+        CanvasObject.SetActive(false);
     }
 
     public void StartButton()
@@ -49,7 +58,10 @@ public class UIButtons : MonoBehaviour
         if (GameManager.Mine.GameStarted)
         {
             ScoreText.gameObject.SetActive(true);
-            ScoreText.text = Score.Mine.ScorePoint + "";
+            ScoreText.text = Score.ScorePoint + "";
+
+            CanvasObject.SetActive(true);
+            CoinsText.text = Score.CoinPoint + "";
         }
         else
             ScoreText.gameObject.SetActive(false);
@@ -62,5 +74,10 @@ public class UIButtons : MonoBehaviour
         fpsCount = (int)(1f / Time.unscaledDeltaTime);
         FPS.text = fpsCount + "FPS";
         fpsDiplay = false;
+    }
+
+    public void animCoin()
+    {
+        CoinsAnim.SetBool("Coins", true);
     }
 }

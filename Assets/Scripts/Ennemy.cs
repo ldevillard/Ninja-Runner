@@ -78,6 +78,7 @@ public class Ennemy : MonoBehaviour
                 GameObject DisFX = Instantiate(DiscreteEffect, transform);
                 DisFX.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
                 AudioFX.Mine.SFXDiscreteKill();
+                Score.Mine.AddCoins(1);
             }
 
             anim.SetBool("Killed", true);

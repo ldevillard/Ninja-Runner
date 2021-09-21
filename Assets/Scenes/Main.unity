@@ -9145,7 +9145,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10856,6 +10856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScorePoint: 0
+  CoinPoint: 0
 --- !u!4 &1265689125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462276, guid: a9fd7d3641b11944ca55dca7b29b828e, type: 3}

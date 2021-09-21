@@ -12,8 +12,7 @@ public class Coins : MonoBehaviour
         {
             AudioFX.Mine.SFXCoins();
             PlayerController.Mine.GenerateCoinFX();
-            //GameObject FX = Instantiate(Effect, transform.parent);
-            //FX.transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+            Score.Mine.AddCoins(1);
             gameObject.SetActive(false);
         }
     }

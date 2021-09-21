@@ -28,7 +28,7 @@ public class FujiExplode : MonoBehaviour
 
     void Update()
     {
-        if (Score.Mine.ScorePoint - counter > 500)
+        if (Score.ScorePoint - counter > 500)
         {
             sky = true;
             skyChooser = !skyChooser;
@@ -38,7 +38,7 @@ public class FujiExplode : MonoBehaviour
             Sakura.SetActive(false);
             SakuraRed.SetActive(true);
             AudioFX.Mine.SFXVolcano();
-            counter = Score.Mine.ScorePoint;
+            counter = Score.ScorePoint;
         }
         if (sky)
         {

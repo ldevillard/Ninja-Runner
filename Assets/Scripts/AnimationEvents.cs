@@ -21,4 +21,10 @@ public class AnimationEvents : MonoBehaviour
         anim.SetBool("Taken", false);
     }
 
+    public void ResetCoinAnim()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("Coins", false);
+    }
+
 }

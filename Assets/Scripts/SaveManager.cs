@@ -18,6 +18,7 @@ public class SaveManager : MonoBehaviour
         saver.SFXVol = AudioFX.Mine.SFX.volume;
         saver.MusicIsOn = AudioFX.Mine.MusicSource.enabled;
         saver.SFXIsOn = AudioFX.Mine.SFX.enabled;
+        saver.Coins = Score.CoinPoint;
 
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
@@ -42,6 +43,10 @@ public class SaveManager : MonoBehaviour
                 AudioFX.Mine.SFX.enabled = saver.SFXIsOn;
                 AudioFX.Mine.RunSource.enabled = saver.SFXIsOn;
             }
+            if (target == "score" || target == "all")
+            {
+                Score.CoinPoint = saver.Coins;
+            }
 
             Debug.Log("Successful to load!");
         }
@@ -52,9 +57,13 @@ public class SaveManager : MonoBehaviour
     [Serializable]
     public class Data
     {
+        //SOUND
         public float MusicVol;
         public float SFXVol;
         public bool MusicIsOn;
         public bool SFXIsOn;
+
+        //SCORE
+        public int Coins;
     }
 } 
