@@ -636,6 +636,7 @@ MonoBehaviour:
   Volcano: {fileID: 8300000, guid: 895fc3b20cb2345e39679b0387e14b7c, type: 3}
   DiscreteKill: {fileID: 8300000, guid: 3f330ac906ec7f546b6a12a0ef41c7ae, type: 3}
   Shop: {fileID: 8300000, guid: 48758ec52e461ff4684442806835d657, type: 3}
+  ShopSelect: {fileID: 8300000, guid: 52667460f79afdc4096194878c4a5127, type: 3}
   Coins:
   - {fileID: 8300000, guid: 977af99516704e04492fcfdb828fbc56, type: 3}
   - {fileID: 8300000, guid: 5b4a89a04adab6c47bc7b0f96e1ac05b, type: 3}

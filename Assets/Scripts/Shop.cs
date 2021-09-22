@@ -48,6 +48,7 @@ public class Shop : MonoBehaviour
 
     public void ChooseSkin()
     {
+        AudioFX.Mine.SFXShopSelect();
         GameObject select = Instantiate(SelectedAnim, ChooseButton.transform.parent);
         select.transform.position = new Vector3(ChooseButton.transform.position.x, ChooseButton.transform.position.y + 0.25f, ChooseButton.transform.position.z);
         PlayerSkinManager.Mine.idx = getIdx();
@@ -56,6 +57,7 @@ public class Shop : MonoBehaviour
 
     public void ChooseWeaponSkin()
     {
+        AudioFX.Mine.SFXShopSelect();
         GameObject select = Instantiate(SelectedAnim, ChooseWeapon.transform.parent);
         select.transform.position = new Vector3(ChooseWeapon.transform.position.x, ChooseWeapon.transform.position.y + 0.25f, ChooseWeapon.transform.position.z);
         PlayerSkinManager.Mine.idxWep = getIdxWeapon();

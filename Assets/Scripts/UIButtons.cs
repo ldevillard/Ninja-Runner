@@ -80,4 +80,9 @@ public class UIButtons : MonoBehaviour
     {
         CoinsAnim.SetBool("Coins", true);
     }
+
+    public void OpenGames()
+    {
+        Application.OpenURL("https://linktr.ee/LoganDev");
+    }
 }
