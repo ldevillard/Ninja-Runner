@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     bool inStarting;
 
-    public GameObject Weapon; //When shop will be enable, use an array to throw the weapon chosen by the player
+    static public GameObject Weapon; //When shop will be enable, use an array to throw the weapon chosen by the player
     public float CDWeapon;
     float saveCD;
     bool canAttack;
