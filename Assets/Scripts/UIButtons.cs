@@ -44,9 +44,9 @@ public class UIButtons : MonoBehaviour
         Destroy(ButtonStart);
     }
 
-    public void OpenSettings()
+    public void OpenSceneAdditive(int idx)
     {
-        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(idx, LoadSceneMode.Additive);
     }
 
     void Update()

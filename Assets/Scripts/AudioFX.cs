@@ -6,7 +6,7 @@ public class AudioFX : MonoBehaviour
 {
     static public AudioFX Mine;
 
-    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano, DiscreteKill;
+    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano, DiscreteKill, Shop;
     public AudioClip[] Coins;
     public AudioSource SFX;
     public AudioSource MusicSource;
@@ -72,6 +72,11 @@ public class AudioFX : MonoBehaviour
     public void SFXDiscreteKill()
     {
         SFX.PlayOneShot(DiscreteKill);
+    }
+
+    public void SFXShop()
+    {
+        SFX.PlayOneShot(Shop);
     }
 
 }

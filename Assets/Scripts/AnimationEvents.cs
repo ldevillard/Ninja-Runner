@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class AnimationEvents : MonoBehaviour
 {
-    public void QuitShop()
+    public void Quit(int idx)
     {
-        SceneManager.UnloadSceneAsync(3);
+        SceneManager.UnloadSceneAsync(idx);
     }
 
     public void Disable()

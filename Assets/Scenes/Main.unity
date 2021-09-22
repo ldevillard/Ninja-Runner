@@ -10855,8 +10855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5271707aca38f49749161022c6d55e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScorePoint: 0
-  CoinPoint: 0
 --- !u!4 &1265689125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462276, guid: a9fd7d3641b11944ca55dca7b29b828e, type: 3}
