@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    static public Shop Mine;
+
     public Animator anim;
     public GameObject Panel;
 
@@ -12,6 +14,8 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
+        Mine = this;
+
         AudioFX.Mine.SFXShop();    
     }
 
@@ -24,6 +28,11 @@ public class Shop : MonoBehaviour
 
     void Update()
     { 
-        DebugIDX.text = "" + Panel.GetComponent<DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap>().CurrentPanel;
+        DebugIDX.text = "" + Panel.GetComponent<DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap>().TargetPanel;
+    }
+
+    public int getIdx()
+    {
+        return Panel.GetComponent<DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap>().TargetPanel;
     }
 }
