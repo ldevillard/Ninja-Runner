@@ -11,6 +11,8 @@ public class Shop : MonoBehaviour
     public GameObject Panel;
 
     public Text DebugIDX;
+    public GameObject ChooseButton;
+    public GameObject SelectedAnim;
 
     void Start()
     {
@@ -29,6 +31,19 @@ public class Shop : MonoBehaviour
     void Update()
     { 
         DebugIDX.text = "" + Panel.GetComponent<DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap>().TargetPanel;
+
+        if (getIdx() == PlayerSkinManager.Mine.idx)
+            ChooseButton.SetActive(false);
+        else
+            ChooseButton.SetActive(true);
+    }
+
+    public void ChooseSkin()
+    {
+        GameObject select = Instantiate(SelectedAnim, ChooseButton.transform.parent);
+        select.transform.position = new Vector3(ChooseButton.transform.position.x, ChooseButton.transform.position.y + 0.2f, ChooseButton.transform.position.z);
+        PlayerSkinManager.Mine.idx = getIdx();
+        PlayerSkinManager.Mine.ResetSkin();
     }
 
     public int getIdx()

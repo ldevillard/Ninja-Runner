@@ -15,6 +15,11 @@ public class AnimationEvents : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void GoDestroy()
+    {
+        Destroy(gameObject);
+    }
+
     public void ResetAnim()
     {
         Animator anim = GetComponent<Animator>();
