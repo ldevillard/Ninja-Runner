@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Shop : MonoBehaviour
 {
@@ -52,8 +53,10 @@ public class Shop : MonoBehaviour
 
         if (getIdxWeapon() == PlayerSkinManager.Mine.idxWep)
             ChooseWeapon.SetActive(false);
-        else //If the weapon is unlocked
+        else if (WeaponsUnlocked[getIdxWeapon()])
             ChooseWeapon.SetActive(true);
+        else
+            ChooseWeapon.SetActive(false);
     }
 
     public void ChooseSkin()
@@ -90,5 +93,10 @@ public class Shop : MonoBehaviour
     public int getIdxWeapon()
     {
         return Panel2.GetComponent<DanielLochner.Assets.SimpleScrollSnap.SimpleScrollSnap>().TargetPanel;
+    }
+
+    public void OpenPackOpening()
+    {
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
     }
 }
