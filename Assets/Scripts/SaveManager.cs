@@ -27,10 +27,13 @@ public class SaveManager : MonoBehaviour
         saver.idxCharacter = PlayerSkinManager.Mine.idx;
         saver.idxWeapon = PlayerSkinManager.Mine.idxWep;
 
+        saver.CharacterUnlocked = PlayerSkinManager.Mine.SkinUnlocked;
+        saver.WeaponUnlocked = PlayerSkinManager.Mine.WeaponUnlocked;
+
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
 
-        Debug.Log("Successful to save!");
+        //Debug.Log("Successful to save!");
     }
 
     static public void Load(string target)
@@ -58,9 +61,15 @@ public class SaveManager : MonoBehaviour
             {
                 PlayerSkinManager.Mine.idx = saver.idxCharacter;
                 PlayerSkinManager.Mine.idxWep = saver.idxWeapon;
+
+            }
+            if (target == "shopUnlock" || target == "all")
+            {
+                PlayerSkinManager.Mine.SkinUnlocked = saver.CharacterUnlocked;
+                PlayerSkinManager.Mine.WeaponUnlocked = saver.WeaponUnlocked;
             }
 
-            Debug.Log("Successful to load!");
+            //Debug.Log("Successful to load!");
         }
         else
             Debug.LogWarning("SaveFile not found!");
@@ -81,6 +90,7 @@ public class SaveManager : MonoBehaviour
         //SHOP
         public int idxCharacter;
         public int idxWeapon;
-        //public int[] CharacterUnlocked;
+        public bool[] CharacterUnlocked;
+        public bool[] WeaponUnlocked;
     }
 } 

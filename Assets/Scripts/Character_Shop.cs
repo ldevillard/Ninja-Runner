@@ -34,9 +34,12 @@ public class Character_Shop : MonoBehaviour
         else if (Shop.Mine.getIdx() != idx && transform.localScale.magnitude > scale.magnitude)
             transform.localScale = Vector3.Lerp(transform.localScale, scale, Time.deltaTime * speed);
 
-        if (!Shop.Mine.SkinsUnlocked[idx])
+        if (!PlayerSkinManager.Mine.SkinUnlocked[idx])
             Cadenas.SetActive(true);
         else
             Cadenas.SetActive(false);
     }
+
+
+
 }

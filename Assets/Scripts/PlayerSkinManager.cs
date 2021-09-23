@@ -11,11 +11,14 @@ public class PlayerSkinManager : MonoBehaviour
     public GameObject[] Skins;
     public GameObject[] SkinsWeapon;
 
+    public bool[] SkinUnlocked;
+    public bool[] WeaponUnlocked;
+
     void Start()
     {
         Mine = this;
 
-        SaveManager.Load("shop");
+        SaveManager.Load("all");
         ResetSkin();
         ResetWep();
     }

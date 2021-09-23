@@ -34,9 +34,14 @@ public class Weapon_Shop : MonoBehaviour
         else if (Shop.Mine.getIdxWeapon() != idx && transform.localScale.magnitude > scale.magnitude)
             transform.localScale = Vector3.Lerp(transform.localScale, scale, Time.deltaTime * speed);
 
-        if (!Shop.Mine.WeaponsUnlocked[idx])
+        
+        if (!PlayerSkinManager.Mine.WeaponUnlocked[idx])
             Cadenas.SetActive(true);
         else
             Cadenas.SetActive(false);
+        
     }
+
+
+
 }

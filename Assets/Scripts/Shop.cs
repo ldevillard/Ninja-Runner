@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Shop : MonoBehaviour
 {
@@ -19,17 +20,16 @@ public class Shop : MonoBehaviour
 
     public int idxCharacter;
     public int idxWeapon;
-    public bool[] SkinsUnlocked;
-    public bool[] WeaponsUnlocked;
 
-    void Start()
+    void Awake()
     {
         Mine = this;
-
         AudioFX.Mine.SFXShop();
 
         idxCharacter = PlayerSkinManager.Mine.idx;
         idxWeapon = PlayerSkinManager.Mine.idxWep;
+
+        SaveManager.Load("all");
     }
 
     public void QuitShop()
@@ -46,17 +46,22 @@ public class Shop : MonoBehaviour
 
         if (getIdx() == PlayerSkinManager.Mine.idx)
             ChooseButton.SetActive(false);
-        else if (SkinsUnlocked[getIdx()])  //If the skin is unlocked
+        else if (PlayerSkinManager.Mine.SkinUnlocked[getIdx()])  //If the skin is unlocked
             ChooseButton.SetActive(true);
         else
             ChooseButton.SetActive(false);
 
         if (getIdxWeapon() == PlayerSkinManager.Mine.idxWep)
             ChooseWeapon.SetActive(false);
-        else if (WeaponsUnlocked[getIdxWeapon()])
+        else if (PlayerSkinManager.Mine.WeaponUnlocked[getIdxWeapon()])
             ChooseWeapon.SetActive(true);
         else
             ChooseWeapon.SetActive(false);
+
+      /*  if (SkinsUnlocked[getIdx()])
+            Debug.Log("Purchased");
+        else
+            Debug.Log("Not Purchased");*/
     }
 
     public void ChooseSkin()

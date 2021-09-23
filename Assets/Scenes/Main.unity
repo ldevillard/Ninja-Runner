@@ -3933,12 +3933,16 @@ MonoBehaviour:
   - {fileID: 165970097}
   - {fileID: 165944633}
   - {fileID: 1890536751}
+  - {fileID: 165995545}
+  - {fileID: 165974945}
   SkinsWeapon:
   - {fileID: 648060076043151828, guid: 70710b680cd6845b89da320287d08dc0, type: 3}
   - {fileID: 6007177695231619440, guid: bc71cf4a09daa4ea0a89d9a7d14edba8, type: 3}
   - {fileID: 6556662881978051361, guid: 5b95379c4d91e4c8788190859f818860, type: 3}
   - {fileID: 7844106580011085081, guid: 12592b8c8ac544a7fae387fd56d258cb, type: 3}
   - {fileID: 3648082878866472728, guid: 899491af071d74de3be801ea3e149133, type: 3}
+  SkinUnlocked: 0100000000000000
+  WeaponUnlocked: 0100000000
 --- !u!1 &165978627
 GameObject:
   m_ObjectHideFlags: 0
