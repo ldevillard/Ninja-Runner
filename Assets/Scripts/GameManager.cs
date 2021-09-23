@@ -37,5 +37,11 @@ public class GameManager : MonoBehaviour
             File.Delete(Application.persistentDataPath + "/save.bipbop");
             Debug.Log("Save deleted");
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Score.Mine.AddCoins(100);
+            SaveManager.Save();
+            Debug.Log("Add 100 coins");
+        }
     }
 }

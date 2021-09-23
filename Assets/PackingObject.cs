@@ -9,13 +9,17 @@ public class PackingObject : MonoBehaviour
 
     void Start()
     {
-        int count = 0;
         GameObject[] tab;
 
         for (int i = 0; i < Objects.Length; i++)
             Objects[i].SetActive(false);
 
         int j = Random.Range(0, Objects.Length);
+
+        if (CheckUnlockSkin() == 1)
+            j = 1;
+        else if (CheckUnlockWep() == 1)
+            j = 0;
 
         Objects[j].SetActive(true);
         if (Objects[j].GetComponent<Character_Shop>() != null)
@@ -27,12 +31,7 @@ public class PackingObject : MonoBehaviour
             int k = Random.Range(0, tab.Length);
 
             while (PlayerSkinManager.Mine.SkinUnlocked[k])
-            {
                 k = Random.Range(0, tab.Length);
-                count++;
-                if (count > 20)
-                    break;
-            }
 
             tab[k].SetActive(true);
 
@@ -49,18 +48,36 @@ public class PackingObject : MonoBehaviour
             int k = Random.Range(0, tab.Length);
 
             while (PlayerSkinManager.Mine.WeaponUnlocked[k])
-            {
                 k = Random.Range(0, tab.Length);
-                count++;
-                if (count > 20)
-                    break;
-            }
-
             tab[k].SetActive(true);
 
             PlayerSkinManager.Mine.WeaponUnlocked[k] = true;
 
             SaveManager.Save();
         }
+    }
+
+    public int CheckUnlockSkin()
+    {
+        int i = 0;
+        while (i < PlayerSkinManager.Mine.SkinUnlocked.Length)
+        {
+            if (!PlayerSkinManager.Mine.SkinUnlocked[i])
+                return (0);
+            i++;
+        }
+        return (1);
+    }
+
+    public int CheckUnlockWep()
+    {
+        int i = 0;
+        while (i < PlayerSkinManager.Mine.WeaponUnlocked.Length)
+        {
+            if (!PlayerSkinManager.Mine.WeaponUnlocked[i])
+                return (0);
+            i++;
+        }
+        return (1);
     }
 }
