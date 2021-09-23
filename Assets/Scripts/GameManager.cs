@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,5 +28,14 @@ public class GameManager : MonoBehaviour
         int i = Random.Range(0, Skyboxs.Length);
         RenderSettings.skybox = Skyboxs[i];
         //Debug.Log(i);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            File.Delete(Application.persistentDataPath + "/save.bipbop");
+            Debug.Log("Save deleted");
+        }
     }
 }

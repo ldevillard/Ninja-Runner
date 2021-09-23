@@ -16,11 +16,19 @@ public class Shop : MonoBehaviour
     public GameObject ChooseWeapon;
     public GameObject SelectedAnim;
 
+    public int idxCharacter;
+    public int idxWeapon;
+    public bool[] SkinsUnlocked;
+    public bool[] WeaponsUnlocked;
+
     void Start()
     {
         Mine = this;
 
-        AudioFX.Mine.SFXShop();    
+        AudioFX.Mine.SFXShop();
+
+        idxCharacter = PlayerSkinManager.Mine.idx;
+        idxWeapon = PlayerSkinManager.Mine.idxWep;
     }
 
     public void QuitShop()
@@ -37,12 +45,14 @@ public class Shop : MonoBehaviour
 
         if (getIdx() == PlayerSkinManager.Mine.idx)
             ChooseButton.SetActive(false);
-        else
+        else if (SkinsUnlocked[getIdx()])  //If the skin is unlocked
             ChooseButton.SetActive(true);
+        else
+            ChooseButton.SetActive(false);
 
         if (getIdxWeapon() == PlayerSkinManager.Mine.idxWep)
             ChooseWeapon.SetActive(false);
-        else
+        else //If the weapon is unlocked
             ChooseWeapon.SetActive(true);
     }
 
@@ -50,18 +60,26 @@ public class Shop : MonoBehaviour
     {
         AudioFX.Mine.SFXShopSelect();
         GameObject select = Instantiate(SelectedAnim, ChooseButton.transform.parent);
-        select.transform.position = new Vector3(ChooseButton.transform.position.x, ChooseButton.transform.position.y + 0.25f, ChooseButton.transform.position.z);
+        select.transform.position = new Vector3(ChooseButton.transform.position.x, ChooseButton.transform.position.y, ChooseButton.transform.position.z);
+
+        idxCharacter = getIdx();
         PlayerSkinManager.Mine.idx = getIdx();
         PlayerSkinManager.Mine.ResetSkin();
+
+        SaveManager.Save();
     }
 
     public void ChooseWeaponSkin()
     {
         AudioFX.Mine.SFXShopSelect();
         GameObject select = Instantiate(SelectedAnim, ChooseWeapon.transform.parent);
-        select.transform.position = new Vector3(ChooseWeapon.transform.position.x, ChooseWeapon.transform.position.y + 0.25f, ChooseWeapon.transform.position.z);
+        select.transform.position = new Vector3(ChooseWeapon.transform.position.x, ChooseWeapon.transform.position.y, ChooseWeapon.transform.position.z);
+
+        idxWeapon = getIdxWeapon();
         PlayerSkinManager.Mine.idxWep = getIdxWeapon();
         PlayerSkinManager.Mine.ResetWep();
+
+        SaveManager.Save();
     }
 
     public int getIdx()

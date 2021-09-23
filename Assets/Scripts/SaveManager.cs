@@ -14,11 +14,18 @@ public class SaveManager : MonoBehaviour
         FileStream Fstream = File.Create(Application.persistentDataPath + "/save.bipbop");
         Data saver = new Data();
 
+        //SOUND
         saver.MusicVol = AudioFX.Mine.MusicSource.volume;
         saver.SFXVol = AudioFX.Mine.SFX.volume;
         saver.MusicIsOn = AudioFX.Mine.MusicSource.enabled;
         saver.SFXIsOn = AudioFX.Mine.SFX.enabled;
+
+        //SCORE
         saver.Coins = Score.CoinPoint;
+
+        //SHOP
+        saver.idxCharacter = PlayerSkinManager.Mine.idx;
+        saver.idxWeapon = PlayerSkinManager.Mine.idxWep;
 
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
@@ -47,6 +54,11 @@ public class SaveManager : MonoBehaviour
             {
                 Score.CoinPoint = saver.Coins;
             }
+            if (target == "shop" || target == "all")
+            {
+                PlayerSkinManager.Mine.idx = saver.idxCharacter;
+                PlayerSkinManager.Mine.idxWep = saver.idxWeapon;
+            }
 
             Debug.Log("Successful to load!");
         }
@@ -65,5 +77,10 @@ public class SaveManager : MonoBehaviour
 
         //SCORE
         public int Coins;
+
+        //SHOP
+        public int idxCharacter;
+        public int idxWeapon;
+        //public int[] CharacterUnlocked;
     }
 } 

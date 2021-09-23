@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Character_Shop : MonoBehaviour
 {
+    static public Character_Shop Mine;
+
     public GameObject[] Skins;
     public int idx;
+    public GameObject Cadenas;
 
     public float speed;
 
@@ -13,6 +16,8 @@ public class Character_Shop : MonoBehaviour
 
     void Start()
     {
+        Mine = this;
+
         for (int i = 0; i < Skins.Length; i++)
             Skins[i].SetActive(false);
         Skins[idx].SetActive(true);
@@ -28,5 +33,10 @@ public class Character_Shop : MonoBehaviour
         }
         else if (Shop.Mine.getIdx() != idx && transform.localScale.magnitude > scale.magnitude)
             transform.localScale = Vector3.Lerp(transform.localScale, scale, Time.deltaTime * speed);
+
+        if (!Shop.Mine.SkinsUnlocked[idx])
+            Cadenas.SetActive(true);
+        else
+            Cadenas.SetActive(false);
     }
 }

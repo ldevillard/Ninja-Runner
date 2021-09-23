@@ -15,6 +15,7 @@ public class PlayerSkinManager : MonoBehaviour
     {
         Mine = this;
 
+        SaveManager.Load("shop");
         ResetSkin();
         ResetWep();
     }
