@@ -30,6 +30,10 @@ public class SaveManager : MonoBehaviour
         saver.CharacterUnlocked = PlayerSkinManager.Mine.SkinUnlocked;
         saver.WeaponUnlocked = PlayerSkinManager.Mine.WeaponUnlocked;
 
+        //STAT
+        Debug.Log("Je vais save : " + Statistics.Mine.NbrPartie);
+        saver.NbrPartie = Statistics.Mine.NbrPartie;
+
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
 
@@ -68,6 +72,11 @@ public class SaveManager : MonoBehaviour
                 PlayerSkinManager.Mine.SkinUnlocked = saver.CharacterUnlocked;
                 PlayerSkinManager.Mine.WeaponUnlocked = saver.WeaponUnlocked;
             }
+            if (target == "stat" || target == "all")
+            {
+                Debug.Log("Je vais load : " + saver.NbrPartie);
+                Statistics.Mine.NbrPartie = saver.NbrPartie;
+            }
 
             //Debug.Log("Successful to load!");
         }
@@ -92,5 +101,8 @@ public class SaveManager : MonoBehaviour
         public int idxWeapon;
         public bool[] CharacterUnlocked;
         public bool[] WeaponUnlocked;
+
+        //STAT
+        public int NbrPartie;
     }
 } 

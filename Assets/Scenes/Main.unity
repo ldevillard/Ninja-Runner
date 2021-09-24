@@ -10884,6 +10884,7 @@ GameObject:
   - component: {fileID: 1258930667}
   - component: {fileID: 1258930669}
   - component: {fileID: 1258930670}
+  - component: {fileID: 1258930671}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -10952,6 +10953,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5271707aca38f49749161022c6d55e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1258930671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258930666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148234a927c9244f3883b0e46c17d714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NbrPartie: 0
+  NbrEnemyKilled: 0
 --- !u!4 &1265689125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462276, guid: a9fd7d3641b11944ca55dca7b29b828e, type: 3}

@@ -38,6 +38,9 @@ public class UIButtons : MonoBehaviour
     {
         StartingPoint.StartingGame = true;
 
+        Statistics.Mine.NbrPartie++;
+        SaveManager.Save();
+
         for (int i = 0; i < Buttons.Length; i++)
             Buttons[i].SetActive(false);
 
