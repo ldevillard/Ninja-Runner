@@ -13,6 +13,7 @@ public class Coins : MonoBehaviour
             AudioFX.Mine.SFXCoins();
             PlayerController.Mine.GenerateCoinFX();
             Score.Mine.AddCoins(1);
+
             gameObject.SetActive(false);
         }
     }

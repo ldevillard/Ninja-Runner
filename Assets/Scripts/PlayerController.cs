@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
 
     bool inStarting;
 
+    bool isAlive;
+    public GameObject Target;
+    public GameObject BloodEffect;
+    bool lerp;
+
+
     static public GameObject Weapon; //When shop will be enable, use an array to throw the weapon chosen by the player
     public float CDWeapon;
     float saveCD;
@@ -43,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Obstacles" || collision.collider.tag == "Ennemy")
-            SceneManager.LoadScene(1);
+            Dead();
         else if (!(collision.collider.tag == "SmallRoof" || collision.collider.tag == "BigRoof"))
             AudioFX.Mine.RunSource.volume = 0;
     }
@@ -63,6 +69,8 @@ public class PlayerController : MonoBehaviour
     {
         Mine = this;
 
+        isAlive = true;
+        lerp = true;
         anim = GetComponent<Animator>();
         trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody>();
@@ -83,15 +91,31 @@ public class PlayerController : MonoBehaviour
         canAttack = true;
         inStarting = false;
         saveCD = CDWeapon;
+
+        Weapon = PlayerSkinManager.Mine.SkinsWeapon[PlayerSkinManager.Mine.idxWep];
     }
 
     void Update()
     {
-        if (GameManager.Mine.GameStarted)
+        if (GameManager.Mine.GameStarted && isAlive)
         {
             Swipe();
             ComputerInputs();
         }
+        else if (!isAlive)
+        {
+            if (Vector3.Distance(transform.position, Target.transform.position) > 1f && lerp)
+            {
+                transform.position = Vector3.Lerp(transform.position, Target.transform.position, 2 * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, Target.transform.rotation, 2 * Time.deltaTime);
+            }
+            else
+            {
+                lerp = false;
+                transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y - 4, transform.position.z), 1 * Time.deltaTime);
+            }
+        }
+
         if (StartingPoint.StartingGame && !inStarting)
             StartCoroutine(Starting());
 
@@ -104,6 +128,20 @@ public class PlayerController : MonoBehaviour
         //Throw a raycast to check if we can jump
         RaycastRoof();
         WeaponCD();
+
+    }
+
+    void Dead()
+    {
+        if (isAlive)
+        {
+            anim.SetBool("Dead", true);
+            isAlive = false;
+            GameManager.Mine.GameStarted = false;
+            rig.isKinematic = true;
+            AudioFX.Mine.SFXKilled();
+            Instantiate(BloodEffect, transform);
+        }
     }
 
     void ComputerInputs()
@@ -139,7 +177,13 @@ public class PlayerController : MonoBehaviour
         GameManager.Mine.GameStarted = true;
         Time.timeScale = 0.75f;
         yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 0.9f;
+        if (PlayerPrefs.HasKey("time"))
+        {
+            Time.timeScale = PlayerPrefs.GetFloat("time");
+            PlayerPrefs.DeleteKey("time");
+        }
+        else
+            Time.timeScale = 0.9f;
     }
 
     IEnumerator Teleporting(float x, float y, float z)

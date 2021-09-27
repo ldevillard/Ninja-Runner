@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Statistics.unity
     guid: 42315fd95a21746d481de1c1be163f4e
+  - enabled: 1
+    path: Assets/Scenes/Losing.unity
+    guid: 61a0c13dc9821492897970a7be6130b7
   m_configObjects: {}

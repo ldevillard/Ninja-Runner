@@ -6,7 +6,7 @@ public class AudioFX : MonoBehaviour
 {
     static public AudioFX Mine;
 
-    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano, DiscreteKill, Shop, ShopSelect, PackOpening, OpenChest;
+    public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano, DiscreteKill, Shop, ShopSelect, PackOpening, OpenChest, GameOver;
     public AudioClip[] Coins;
     public AudioSource SFX;
     public AudioSource MusicSource;
@@ -92,5 +92,10 @@ public class AudioFX : MonoBehaviour
     public void SFXOpenChest()
     {
         SFX.PlayOneShot(OpenChest);
+    }
+
+    public void SFXGameOver()
+    {
+        SFX.PlayOneShot(GameOver);
     }
 }

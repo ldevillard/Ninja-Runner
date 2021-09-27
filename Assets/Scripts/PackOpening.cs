@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PackOpening : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PackOpening : MonoBehaviour
     public GameObject PackButton;
 
     public GameObject NotEnoughMoney;
+
+    public Text CoinsText;
 
     void Start()
     {
@@ -38,7 +41,11 @@ public class PackOpening : MonoBehaviour
             return;
         }
         else
+        {
             Score.Mine.AddCoins(-100);
+            Statistics.Mine.NbrCoinsUsed += 100;
+            SaveManager.Save();
+        }
         //Pack
         ChestAnim.SetBool("Open", true);
         ButtonPack.SetBool("Open", true);
@@ -65,5 +72,10 @@ public class PackOpening : MonoBehaviour
             i++;
         }
         return (1);
+    }
+
+    void Update()
+    {
+        CoinsText.text = "" + Score.CoinPoint;
     }
 }

@@ -10,6 +10,16 @@ public class AnimationEvents : MonoBehaviour
         SceneManager.UnloadSceneAsync(idx);
     }
 
+    public void LoadSceneAdditive(int idx)
+    {
+        SceneManager.LoadSceneAsync(idx, LoadSceneMode.Additive);
+    }
+
+    public void LoadScene(int idx)
+    {
+        SceneManager.LoadSceneAsync(idx);
+    }
+
     public void Disable()
     {
         gameObject.SetActive(false);
@@ -26,10 +36,26 @@ public class AnimationEvents : MonoBehaviour
         anim.SetBool("Taken", false);
     }
 
+    public void ResetDeadAnim()
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("Dead", false);
+    }
+
     public void ResetCoinAnim()
     {
         Animator anim = GetComponent<Animator>();
         anim.SetBool("Coins", false);
+    }
+
+    public void SoundSwitch()
+    {
+        AudioFX.Mine.SFXSwitch();
+    }
+
+    public void SoundCoin()
+    {
+        AudioFX.Mine.SFXCoins();
     }
 
 }

@@ -8,8 +8,12 @@ public class Statistics : MonoBehaviour
 
     public int NbrPartie;
     public int NbrEnemyKilled;
+    public int NbrEnemyKilledDiscret;
+    public int NbrFujiExplode;
+    public int NbrCoinsCollected;
+    public int NbrCoinsUsed;
 
-    void Start()
+    void Awake()
     {
         Mine = this;
 

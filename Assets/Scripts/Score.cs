@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
     static public Score Mine;
 
     static public int ScorePoint;
+    static public int HighScore;
     static public int CoinPoint;
 
     int scoreCalculator;
@@ -16,7 +17,13 @@ public class Score : MonoBehaviour
     {
         Mine = this;
         counter = 0;
-        ScorePoint = 0;
+        if (PlayerPrefs.HasKey("score"))
+        {
+            ScorePoint = PlayerPrefs.GetInt("score");
+            InitTimeScale();
+        }
+        else
+            ScorePoint = 0;
         scoreCalculator = ScorePoint;
     }
 
@@ -37,12 +44,31 @@ public class Score : MonoBehaviour
                 Time.timeScale += 0.1f;
             }
         }
+
+        if (ScorePoint > HighScore)
+            HighScore = ScorePoint;
+        //Debug.Log(Time.timeScale);
+    }
+
+    void InitTimeScale()
+    {
+        int buf = ScorePoint / 150;
+        while (buf > 0 && Time.timeScale < 1.8f)
+        {
+            Time.timeScale += 0.1f;
+            buf--;
+        }
     }
 
     public void AddCoins(int quantity)
     {
         CoinPoint += quantity;
         UIButtons.Mine.animCoin();
+
+        if (quantity > 0)
+            Statistics.Mine.NbrCoinsCollected += quantity;
         SaveManager.Save();
+
+        //SaveManager.Save();
     }
 }

@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
 
         //SCORE
         saver.Coins = Score.CoinPoint;
+        saver.HighScore = Score.HighScore;
 
         //SHOP
         saver.idxCharacter = PlayerSkinManager.Mine.idx;
@@ -31,8 +32,12 @@ public class SaveManager : MonoBehaviour
         saver.WeaponUnlocked = PlayerSkinManager.Mine.WeaponUnlocked;
 
         //STAT
-        Debug.Log("Je vais save : " + Statistics.Mine.NbrPartie);
         saver.NbrPartie = Statistics.Mine.NbrPartie;
+        saver.NbrEnemyKilled = Statistics.Mine.NbrEnemyKilled;
+        saver.NbrEnemyKilledDiscret = Statistics.Mine.NbrEnemyKilledDiscret;
+        saver.NbrFujiExplode = Statistics.Mine.NbrFujiExplode;
+        saver.NbrCoinsCollected = Statistics.Mine.NbrCoinsCollected;
+        saver.NbrCoinsUsed = Statistics.Mine.NbrCoinsUsed;
 
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
@@ -60,6 +65,7 @@ public class SaveManager : MonoBehaviour
             if (target == "score" || target == "all")
             {
                 Score.CoinPoint = saver.Coins;
+                Score.HighScore = saver.HighScore;
             }
             if (target == "shop" || target == "all")
             {
@@ -74,8 +80,12 @@ public class SaveManager : MonoBehaviour
             }
             if (target == "stat" || target == "all")
             {
-                Debug.Log("Je vais load : " + saver.NbrPartie);
                 Statistics.Mine.NbrPartie = saver.NbrPartie;
+                Statistics.Mine.NbrEnemyKilled = saver.NbrEnemyKilled;
+                Statistics.Mine.NbrEnemyKilledDiscret = saver.NbrEnemyKilledDiscret;
+                Statistics.Mine.NbrFujiExplode = saver.NbrFujiExplode;
+                Statistics.Mine.NbrCoinsCollected = saver.NbrCoinsCollected;
+                Statistics.Mine.NbrCoinsUsed = saver.NbrCoinsUsed;
             }
 
             //Debug.Log("Successful to load!");
@@ -95,6 +105,7 @@ public class SaveManager : MonoBehaviour
 
         //SCORE
         public int Coins;
+        public int HighScore;
 
         //SHOP
         public int idxCharacter;
@@ -104,5 +115,10 @@ public class SaveManager : MonoBehaviour
 
         //STAT
         public int NbrPartie;
+        public int NbrEnemyKilled;
+        public int NbrEnemyKilledDiscret;
+        public int NbrFujiExplode;
+        public int NbrCoinsCollected;
+        public int NbrCoinsUsed;
     }
 } 

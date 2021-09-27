@@ -23,12 +23,16 @@ public class FujiExplode : MonoBehaviour
         shake.enabled = false;
         Sakura.SetActive(true);
         SakuraRed.SetActive(false);
-        counter = 0;
+
+        if (PlayerPrefs.HasKey("score"))
+            counter = Score.ScorePoint;
+        else
+            counter = 0;
     }
 
     void Update()
     {
-        if (Score.ScorePoint - counter > 500)
+        if (Score.ScorePoint - counter > 500 && GameManager.Mine.GameStarted)
         {
             sky = true;
             skyChooser = !skyChooser;
@@ -39,6 +43,9 @@ public class FujiExplode : MonoBehaviour
             SakuraRed.SetActive(true);
             AudioFX.Mine.SFXVolcano();
             counter = Score.ScorePoint;
+
+            Statistics.Mine.NbrFujiExplode++;
+            SaveManager.Save();
         }
         if (sky)
         {
