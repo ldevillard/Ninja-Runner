@@ -17,7 +17,20 @@ public class MainLoader : MonoBehaviour
 
     public void LoadLevel(int index)
     {
-        StartCoroutine(LoadAsynchronously(index));
+        StartCoroutine(Load(index));
+        //StartCoroutine(LoadAsynchronously(index));
+    }
+
+    IEnumerator Load(int idx)
+    {
+        slider.value = 0;
+        while (slider.value < 1)
+        {
+            slider.value += 0.02f;
+            progressText.text = (int)(slider.value * 100) + "%";
+            yield return new WaitForEndOfFrame();
+        }
+        SceneManager.LoadSceneAsync(idx);
     }
 
     IEnumerator LoadAsynchronously(int index)

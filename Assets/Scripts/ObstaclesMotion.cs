@@ -39,7 +39,16 @@ public class ObstaclesMotion : MonoBehaviour
         for (int i = 0; i < Moduls.Length; i++)
             Moduls[i].gameObject.SetActive(false);
 
-        Moduls[j].gameObject.SetActive(true);
+        if (gameObject.name == "Pan1")
+        {
+            int k = Random.Range(0, 2);
+            if (k == 0)
+                Moduls[0].gameObject.SetActive(true);
+            else
+                Moduls[3].gameObject.SetActive(true);
+        }
+        else
+            Moduls[j].gameObject.SetActive(true);
     }
 
     public void RandomGenerator()

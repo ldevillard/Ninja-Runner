@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public GameObject ArrowTuto;
     public GameObject PointTuto;
     public GameObject Canvas;
+    public GameObject LetsGo;
 
     /*0 = jump
       1 = swipe left
@@ -86,14 +87,14 @@ public class PlayerController : MonoBehaviour
     {
         AudioFX.Mine.RunSource.volume = 0;
 
-        if (collision.collider.tag == "Tuto1")
+        /*if (collision.collider.tag == "Tuto1")
             Time.timeScale = 0.9f;
         else if (collision.collider.tag == "Tuto2")
             Time.timeScale = 0.9f;
         else if (collision.collider.tag == "Tuto3")
             Time.timeScale = 0.9f;
         else if (collision.collider.tag == "Tuto4")
-            Time.timeScale = 0.9f;
+            Time.timeScale = 0.9f;*/
     }
 
     void Start()
@@ -242,7 +243,10 @@ public class PlayerController : MonoBehaviour
 
         tutoKill++;
         if (tutoKill == 2)
+        {
             PlayerPrefs.SetInt("tuto", 1);
+            LetsGo.SetActive(true);
+        }
     }
 
     void Dead()
@@ -270,8 +274,6 @@ public class PlayerController : MonoBehaviour
             DownDash();
         else if (Input.GetKeyDown(KeyCode.Space))
             ThrowWeapon();
-        else
-            ResetAnim();
     }
 
     IEnumerator Starting()
@@ -291,8 +293,12 @@ public class PlayerController : MonoBehaviour
         AudioFX.Mine.SFXSwitch();
         anim.SetBool("StartGame", true);
         GameManager.Mine.GameStarted = true;
-        Time.timeScale = 0.75f;
-        yield return new WaitForSeconds(0.5f);
+        while (Time.timeScale > 0.5f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(1f);
         if (PlayerPrefs.HasKey("time"))
         {
             Time.timeScale = PlayerPrefs.GetFloat("time");
