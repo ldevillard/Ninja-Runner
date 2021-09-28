@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             File.Delete(Application.persistentDataPath + "/save.bipbop");
+            PlayerPrefs.DeleteAll();
             Debug.Log("Save deleted");
         }
         if (Input.GetKeyDown(KeyCode.C))
@@ -42,6 +43,11 @@ public class GameManager : MonoBehaviour
             Score.Mine.AddCoins(100);
             SaveManager.Save();
             Debug.Log("Add 100 coins");
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            PlayerPrefs.SetInt("tuto", 1);
+            Debug.Log("set tuto");
         }
     }
 }

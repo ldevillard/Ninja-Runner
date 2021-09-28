@@ -11,7 +11,10 @@ public class ObstaclesMotion : MonoBehaviour
 
     void Awake()
     {
-        GenerateFirstTime();
+        if (PlayerPrefs.HasKey("tuto"))
+            GenerateFirstTime();
+        else
+            GenerateTuto();
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,7 +22,7 @@ public class ObstaclesMotion : MonoBehaviour
         if (other.tag == "MainCamera")
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 120);
-            RandomGenerator();
+                RandomGenerator();
         }
     }
 
@@ -57,5 +60,13 @@ public class ObstaclesMotion : MonoBehaviour
         }
 
         Moduls[j].GetComponent<CoinsGenerator>().GenerateCoins();
+    }
+
+    void GenerateTuto()
+    {
+        if (Moduls[3].gameObject.activeSelf == true)
+        {
+            Moduls[3].GetComponent<EnnemyGenerator>().GenerateEnnemy();
+        }
     }
 }

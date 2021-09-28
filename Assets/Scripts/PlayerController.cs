@@ -46,12 +46,34 @@ public class PlayerController : MonoBehaviour
 
     public GameObject CoinEffect;
 
+    //Tuto
+    int movement;
+    int tutoKill = 0;
+    public GameObject ArrowTuto;
+    public GameObject PointTuto;
+    public GameObject Canvas;
+
+    /*0 = jump
+      1 = swipe left
+      2 = swipe right
+      3 = dash down
+      4 = attack
+    */
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Obstacles" || collision.collider.tag == "Ennemy")
             Dead();
         else if (!(collision.collider.tag == "SmallRoof" || collision.collider.tag == "BigRoof"))
             AudioFX.Mine.RunSource.volume = 0;
+        if (collision.collider.tag == "Tuto1")
+            StartCoroutine(FirstAction());
+        else if (collision.collider.tag == "Tuto2")
+            StartCoroutine(SecAction());
+        else if (collision.collider.tag == "Tuto3")
+            StartCoroutine(ThirdAction());
+        else if (collision.collider.tag == "Tuto4")
+            StartCoroutine(ThourthAction());
     }
 
     void OnCollisionStay(Collision collision)
@@ -63,6 +85,15 @@ public class PlayerController : MonoBehaviour
     void OnCollisionExit(Collision collision)
     {
         AudioFX.Mine.RunSource.volume = 0;
+
+        if (collision.collider.tag == "Tuto1")
+            Time.timeScale = 0.9f;
+        else if (collision.collider.tag == "Tuto2")
+            Time.timeScale = 0.9f;
+        else if (collision.collider.tag == "Tuto3")
+            Time.timeScale = 0.9f;
+        else if (collision.collider.tag == "Tuto4")
+            Time.timeScale = 0.9f;
     }
 
     void Start()
@@ -93,11 +124,14 @@ public class PlayerController : MonoBehaviour
         saveCD = CDWeapon;
 
         Weapon = PlayerSkinManager.Mine.SkinsWeapon[PlayerSkinManager.Mine.idxWep];
+
+        //tuto
+        movement = -1;
     }
 
     void Update()
     {
-        if (GameManager.Mine.GameStarted && isAlive)
+        if (GameManager.Mine.GameStarted && isAlive )
         {
             Swipe();
             ComputerInputs();
@@ -131,6 +165,86 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    IEnumerator FirstAction()
+    {
+        while (Time.timeScale > 0.05f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 0.02f;
+        GameObject Arr = Instantiate(ArrowTuto, Canvas.transform);
+        yield return new WaitUntil(() => movement == 0);
+        Destroy(Arr);
+        Time.timeScale = 0.9f;
+        movement = -1;
+
+        yield return new WaitForSeconds(0.2f);
+
+        while (Time.timeScale > 0.05f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 0.02f;
+        GameObject Arr2 = Instantiate(ArrowTuto, Canvas.transform);
+        Arr2.transform.rotation = new Quaternion(0, 0, 1, Arr2.transform.rotation.w);
+        yield return new WaitUntil(() => movement == 1);
+        Destroy(Arr2);
+        Time.timeScale = 0.9f;
+        movement = -1;
+    }
+
+    IEnumerator SecAction()
+    {
+        while (Time.timeScale > 0.05f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 0.02f;
+        GameObject Arr2 = Instantiate(ArrowTuto, Canvas.transform);
+        Arr2.transform.rotation = new Quaternion(0, 0, -1, Arr2.transform.rotation.w);
+        yield return new WaitUntil(() => movement == 2);
+        Destroy(Arr2);
+        Time.timeScale = 0.9f;
+        movement = -1;
+    }
+
+    IEnumerator ThirdAction()
+    {
+        while (Time.timeScale > 0.05f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 0.02f;
+        GameObject Arr = Instantiate(ArrowTuto, Canvas.transform);
+        yield return new WaitUntil(() => movement == 0);
+        Destroy(Arr);
+        Time.timeScale = 0.9f;
+        movement = -1;
+    }
+
+    IEnumerator ThourthAction()
+    {
+        while (Time.timeScale > 0.05f)
+        {
+            Time.timeScale -= 0.05f;
+            yield return new WaitForEndOfFrame();
+        }
+        Time.timeScale = 0.02f;
+        GameObject Point = Instantiate(PointTuto, Canvas.transform);
+        yield return new WaitUntil(() => movement == 4);
+        Destroy(Point);
+        Time.timeScale = 0.9f;
+        movement = -1;
+
+        tutoKill++;
+        if (tutoKill == 2)
+            PlayerPrefs.SetInt("tuto", 1);
+    }
+
     void Dead()
     {
         if (isAlive)
@@ -150,12 +264,14 @@ public class PlayerController : MonoBehaviour
             SwitchLeft();
         else if (Input.GetKeyDown(KeyCode.RightArrow) && Direction == 0)
             SwitchRight();
-        else if (Input.GetKeyDown(KeyCode.UpArrow) && !inJump && Roof != -1)
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && ((!inJump && Roof != -1) || ((!PlayerPrefs.HasKey("tuto")) && !inJump)))
             Jump(JumpForce);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
             DownDash();
         else if (Input.GetKeyDown(KeyCode.Space))
             ThrowWeapon();
+        else
+            ResetAnim();
     }
 
     IEnumerator Starting()
@@ -258,6 +374,7 @@ public class PlayerController : MonoBehaviour
         getTeleport = true;
         if (Roof == 1)
             anim.SetBool("Roll", true);
+        movement = 1;
     }
 
     void SwitchRight()
@@ -267,6 +384,7 @@ public class PlayerController : MonoBehaviour
         getTeleport = true;
         if (Roof == 1)
             anim.SetBool("Roll2", true);
+        movement = 2;
     }
 
     void Jump(float force)
@@ -292,6 +410,8 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Jump2", true);
                 break;
         }
+
+        movement = 0;
     }
 
     void    DownDash()
@@ -324,6 +444,7 @@ public class PlayerController : MonoBehaviour
         GameObject wep = Instantiate(Weapon, trans.parent);
         wep.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);
         canAttack = false;
+        movement = 4;
     }
 
     public void GenerateCoinFX()
@@ -367,6 +488,8 @@ public class PlayerController : MonoBehaviour
                 {
                     //Debug.Log("Up");
                     if (!inJump && Roof != -1)
+                        Jump(JumpForce);
+                    else if (PlayerPrefs.HasKey("tuto") == false)
                         Jump(JumpForce);
                     stopTouch = true;
                 }

@@ -24,6 +24,8 @@ public class LoseScreen : MonoBehaviour
             AdButton.SetActive(false);
             PlayerPrefs.DeleteKey("score");
         }
+        if (!PlayerPrefs.HasKey("tuto"))
+            AdButton.SetActive(false);
     }
 
     public void RestartGame()

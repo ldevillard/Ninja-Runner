@@ -11,6 +11,10 @@ TagManager:
   - Ennemy
   - Weapon
   - Bounce
+  - Tuto2
+  - Tuto1
+  - Tuto3
+  - Tuto4
   layers:
   - Default
   - TransparentFX
