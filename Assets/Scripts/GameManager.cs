@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
         NameRequestWindow.GetComponent<Animator>().SetBool("Set", true);
         UIButtons.Mine.ShowUI();
 
-        LeaderBoardManager.Mine.SubmitName();
+        if (LeaderBoardManager.isLogged)
+            LeaderBoardManager.Mine.SubmitName();
     }
 
     void GenerateSkybox()

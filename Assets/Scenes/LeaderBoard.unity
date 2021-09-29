@@ -337,6 +337,7 @@ MonoBehaviour:
   yourRank: {fileID: 760797617057595004}
   rankParent: {fileID: 2059827109}
   Name: {fileID: 1066619995}
+  Scoretxt: {fileID: 760797616384744749}
 --- !u!4 &201149393
 Transform:
   m_ObjectHideFlags: 0
@@ -1050,8 +1051,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1262421723}
   m_HandleRect: {fileID: 1262421722}
   m_Direction: 2
-  m_Value: 0.99998945
-  m_Size: 0.39316514
+  m_Value: 0.99998933
+  m_Size: 0.39316508
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

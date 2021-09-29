@@ -10,9 +10,14 @@ public class LeaderBoardManager : MonoBehaviour
 
     public string UserName;
 
+    static public bool isLogged;
+
     void Start()
     {
         Mine = this;
+
+        isLogged = false;
+
         Login();
     }
 
@@ -75,6 +80,7 @@ public class LeaderBoardManager : MonoBehaviour
 
     void OnSuccess(LoginResult result)
     {
+        isLogged = true;
         Debug.Log("Successful login/account create!");
         string name = null;
 
@@ -84,6 +90,7 @@ public class LeaderBoardManager : MonoBehaviour
 
     void OnError(PlayFabError error)
     {
+        isLogged = false;
         Debug.Log("Error while login/creating account!");
         Debug.Log(error.GenerateErrorReport());
     }

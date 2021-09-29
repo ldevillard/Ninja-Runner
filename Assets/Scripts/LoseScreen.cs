@@ -28,7 +28,8 @@ public class LoseScreen : MonoBehaviour
         if (!PlayerPrefs.HasKey("tuto"))
             AdButton.SetActive(false);
 
-        LeaderBoardManager.Mine.SendLeaderBoard(Score.HighScore);
+        if (LeaderBoardManager.isLogged)
+            LeaderBoardManager.Mine.SendLeaderBoard(Score.HighScore);
     }
 
     public void RestartGame()

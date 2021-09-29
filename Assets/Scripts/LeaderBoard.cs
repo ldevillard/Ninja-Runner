@@ -15,16 +15,22 @@ public class LeaderBoard : MonoBehaviour
     public Transform rankParent;
 
     public Text Name;
+    public Text Scoretxt;
 
     void Start()
     {
         Mine = this;
 
-        LeaderBoardManager.Mine.SubmitName();
+        if (LeaderBoardManager.isLogged)
+            LeaderBoardManager.Mine.SubmitName();
 
         AudioFX.Mine.SFXSettings();
-        LeaderBoardManager.Mine.GetLeaderBoard();
+
+        if (LeaderBoardManager.isLogged)
+            LeaderBoardManager.Mine.GetLeaderBoard();
+
         Name.text = LeaderBoardManager.Mine.UserName + "";
+        Scoretxt.text = Score.HighScore + "";
 
         UIButtons.Mine.DisableUI();
     }
