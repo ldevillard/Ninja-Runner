@@ -14,7 +14,10 @@ public class ObstaclesMotion : MonoBehaviour
         if (PlayerPrefs.HasKey("tuto"))
             GenerateFirstTime();
         else
+        {
+            Debug.Log("Not TUTO");
             GenerateTuto();
+        }
     }
 
     void OnTriggerEnter(Collider other)

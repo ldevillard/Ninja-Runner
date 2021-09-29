@@ -39,6 +39,9 @@ public class SaveManager : MonoBehaviour
         saver.NbrCoinsCollected = Statistics.Mine.NbrCoinsCollected;
         saver.NbrCoinsUsed = Statistics.Mine.NbrCoinsUsed;
 
+        //DATABASE
+        saver.UserName = LeaderBoardManager.Mine.UserName;
+
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
 
@@ -87,7 +90,8 @@ public class SaveManager : MonoBehaviour
                 Statistics.Mine.NbrCoinsCollected = saver.NbrCoinsCollected;
                 Statistics.Mine.NbrCoinsUsed = saver.NbrCoinsUsed;
             }
-
+            if (target == "name" || target == "all")
+                LeaderBoardManager.Mine.UserName = saver.UserName;
             //Debug.Log("Successful to load!");
         }
         else
@@ -120,5 +124,8 @@ public class SaveManager : MonoBehaviour
         public int NbrFujiExplode;
         public int NbrCoinsCollected;
         public int NbrCoinsUsed;
+
+        //DATA BASE
+        public string UserName;
     }
 } 

@@ -293,7 +293,7 @@ public class PlayerController : MonoBehaviour
         AudioFX.Mine.SFXSwitch();
         anim.SetBool("StartGame", true);
         GameManager.Mine.GameStarted = true;
-        while (Time.timeScale > 0.5f)
+        while (Time.timeScale > 0.75f)
         {
             Time.timeScale -= 0.05f;
             yield return new WaitForEndOfFrame();

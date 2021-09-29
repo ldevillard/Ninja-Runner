@@ -7,6 +7,8 @@ public class Tuto : MonoBehaviour
     void Update()
     {
         if (PlayerPrefs.HasKey("tuto"))
+        {
             gameObject.SetActive(false);
+        }
     }
 }

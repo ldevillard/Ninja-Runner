@@ -32,6 +32,21 @@ public class UIButtons : MonoBehaviour
         TimeChanger.value = 0.9f;
         fpsDiplay = false;
         CanvasObject.SetActive(false);
+
+        if (!PlayerPrefs.HasKey("name"))
+            DisableUI();
+    }
+
+    public void DisableUI()
+    {
+        for (int i = 0; i < Buttons.Length; i++)
+            Buttons[i].SetActive(false);
+    }
+
+    public void ShowUI()
+    {
+        for (int i = 0; i < Buttons.Length; i++)
+            Buttons[i].SetActive(true);
     }
 
     public void StartButton()

@@ -13,6 +13,7 @@ public class LoseScreen : MonoBehaviour
 
     void Start()
     {
+
         AudioFX.Mine.SFXGameOver();
         SaveManager.Save();
 
@@ -26,6 +27,8 @@ public class LoseScreen : MonoBehaviour
         }
         if (!PlayerPrefs.HasKey("tuto"))
             AdButton.SetActive(false);
+
+        LeaderBoardManager.Mine.SendLeaderBoard(Score.HighScore);
     }
 
     public void RestartGame()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Material mat;
     public Material[] Skyboxs;
 
+    public InputField NameRequest;
+    public GameObject NameRequestWindow;
 
     void Start()
     {
@@ -21,6 +24,20 @@ public class GameManager : MonoBehaviour
         RenderSettings.skybox = mat;
         GenerateSkybox();
         SaveManager.Load("all");
+
+        if (PlayerPrefs.HasKey("name"))
+            NameRequestWindow.SetActive(false);
+    }
+
+    public void SetName()
+    {
+        LeaderBoardManager.Mine.UserName = NameRequest.text;
+        PlayerPrefs.SetInt("name", 1);
+        SaveManager.Save();
+        NameRequestWindow.GetComponent<Animator>().SetBool("Set", true);
+        UIButtons.Mine.ShowUI();
+
+        LeaderBoardManager.Mine.SubmitName();
     }
 
     void GenerateSkybox()
