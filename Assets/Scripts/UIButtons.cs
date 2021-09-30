@@ -22,6 +22,8 @@ public class UIButtons : MonoBehaviour
     public Text CoinsText;
     public Animator CoinsAnim;
 
+    public Text CoinsText2;
+
     float fpsCount;
     bool fpsDiplay;
 
@@ -83,6 +85,8 @@ public class UIButtons : MonoBehaviour
         }
         else
             ScoreText.gameObject.SetActive(false);
+
+        CoinsText2.text = Score.CoinPoint + "";
     }
 
     IEnumerator DisplayFPS()

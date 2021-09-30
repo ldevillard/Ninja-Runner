@@ -17,6 +17,8 @@ public class LeaderBoard : MonoBehaviour
     public Text Name;
     public Text Scoretxt;
 
+    public GameObject InternetTitle;
+
     void Start()
     {
         Mine = this;
@@ -28,6 +30,8 @@ public class LeaderBoard : MonoBehaviour
 
         if (LeaderBoardManager.isLogged)
             LeaderBoardManager.Mine.GetLeaderBoard();
+        else
+            InternetTitle.SetActive(true);
 
         Name.text = LeaderBoardManager.Mine.UserName + "";
         Scoretxt.text = Score.HighScore + "";

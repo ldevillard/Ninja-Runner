@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeaderBoard.unity
     guid: 1d0d4880c29b8427882895328fa1a5b4
+  - enabled: 1
+    path: Assets/Scenes/IAPShop.unity
+    guid: 3e4c644c6ae074b74b719c58e96fa6e1
   m_configObjects: {}
