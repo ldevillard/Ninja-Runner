@@ -6557,7 +6557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &512143112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11697,6 +11697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f49080fc94448f1ad382219fc71943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nbrGame: 0
 --- !u!4 &1265689125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462276, guid: a9fd7d3641b11944ca55dca7b29b828e, type: 3}
@@ -19440,7 +19441,7 @@ RectTransform:
   m_GameObject: {fileID: 1529015766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
   m_Children:
   - {fileID: 1881322391}
   m_Father: {fileID: 1543288139}
@@ -19464,7 +19465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9162466, b: 0.6179246, a: 1}
+  m_Color: {r: 1, g: 0.8660754, b: 0.61960787, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19541,7 +19542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6933962, b: 0.72090745, a: 1}
+  m_Color: {r: 0.7510426, g: 0.6556604, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19929,7 +19930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1585757753
 Animator:
   serializedVersion: 3

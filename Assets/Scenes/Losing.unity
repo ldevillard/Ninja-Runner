@@ -401,6 +401,8 @@ MonoBehaviour:
   HighscoreTxt: {fileID: 2061837408}
   AdButton: {fileID: 667194173}
   Fade: {fileID: 2014212358}
+  VideoIcon: {fileID: 667194175}
+  Heart: {fileID: 21300000, guid: c58480b708f264fdbbdf05d3f9033263, type: 3}
 --- !u!4 &280712720
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class Ads : MonoBehaviour, IUnityAdsListener
     bool testMode = false;
     string mySurfacingId = "rewardedVideo";
 
+    static public bool NoAds;
+    public int nbrGame;
+
 #if UNITY_IOS
     private string gameId = "4380132";
 #elif UNITY_ANDROID
@@ -25,7 +28,35 @@ public class Ads : MonoBehaviour, IUnityAdsListener
 
     void Start()
     {
-        Mine = this;   
+        Mine = this;
+
+        NoAds = false;
+        SaveManager.Load("ads");
+
+        if (PlayerPrefs.HasKey("counterAds"))
+            nbrGame = PlayerPrefs.GetInt("counterAds");
+        else
+            nbrGame = 0;
+    }
+
+    public void IncGameCounter()
+    {
+        nbrGame++;
+        if (nbrGame == 3)
+        {
+            nbrGame = 0;
+            ShowAd();
+        }
+        Debug.Log(nbrGame);
+        PlayerPrefs.SetInt("counterAds", nbrGame);
+    }
+
+    public void ShowAd()
+    {
+        if (Advertisement.IsReady("Inter"))
+            Advertisement.Show("Inter");
+        else
+            Debug.Log("Ad can't be shown at the moment!");
     }
 
     public void ShowRewardedVideo()
@@ -47,6 +78,7 @@ public class Ads : MonoBehaviour, IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
+            PlayerPrefs.SetInt("res", 1);
             PlayerPrefs.SetInt("score", Score.ScorePoint);
             PlayerPrefs.SetFloat("time", Time.timeScale);
             SceneManager.LoadSceneAsync(1);

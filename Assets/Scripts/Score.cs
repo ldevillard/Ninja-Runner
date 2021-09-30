@@ -17,9 +17,13 @@ public class Score : MonoBehaviour
     {
         Mine = this;
         counter = 0;
-        if (PlayerPrefs.HasKey("score"))
+
+        if (PlayerPrefs.HasKey("score") && PlayerPrefs.HasKey("res"))
         {
+            Debug.Log("Test");
             ScorePoint = PlayerPrefs.GetInt("score");
+            StartingPoint.StartingGame = true;
+            PlayerPrefs.DeleteKey("res");
             InitTimeScale();
         }
         else

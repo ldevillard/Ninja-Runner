@@ -11,6 +11,9 @@ public class LoseScreen : MonoBehaviour
 
     public GameObject Fade;
 
+    public Image VideoIcon;
+    public Sprite Heart;
+
     void Start()
     {
 
@@ -30,15 +33,29 @@ public class LoseScreen : MonoBehaviour
 
         if (LeaderBoardManager.isLogged)
             LeaderBoardManager.Mine.SendLeaderBoard(Score.HighScore);
+
+        if (Ads.NoAds)
+            VideoIcon.sprite = Heart;
     }
 
     public void RestartGame()
     {
+        if (!Ads.NoAds)
+            Ads.Mine.IncGameCounter();
         Fade.SetActive(true);
     }
 
     public void ShowRewardedAds()
     {
-        Ads.Mine.ShowRewardedVideo();
+        if (!Ads.NoAds)
+            Ads.Mine.ShowRewardedVideo();
+        else
+        {
+            PlayerPrefs.SetInt("res", 1);
+            PlayerPrefs.SetInt("score", Score.ScorePoint);
+            PlayerPrefs.SetFloat("time", Time.timeScale);
+            Fade.SetActive(true);
+            //SceneManager.LoadSceneAsync(1);
+        }
     }
 }

@@ -41,6 +41,7 @@ public class SaveManager : MonoBehaviour
 
         //DATABASE
         saver.UserName = LeaderBoardManager.Mine.UserName;
+        saver.NoAds = Ads.NoAds;
 
         Binary.Serialize(Fstream, saver);
         Fstream.Close();
@@ -92,6 +93,8 @@ public class SaveManager : MonoBehaviour
             }
             if (target == "name" || target == "all")
                 LeaderBoardManager.Mine.UserName = saver.UserName;
+            if (target == "ads" || target == "all")
+                Ads.NoAds = saver.NoAds;
             //Debug.Log("Successful to load!");
         }
         else
@@ -127,5 +130,6 @@ public class SaveManager : MonoBehaviour
 
         //DATA BASE
         public string UserName;
+        public bool NoAds;
     }
 } 

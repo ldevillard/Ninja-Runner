@@ -37,6 +37,12 @@ public class UIButtons : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("name"))
             DisableUI();
+
+        if (Ads.NoAds)
+            Buttons[9].SetActive(false); //Ads Button
+
+        if (StartingPoint.StartingGame)
+            DisableUI();
     }
 
     public void DisableUI()
@@ -49,6 +55,9 @@ public class UIButtons : MonoBehaviour
     {
         for (int i = 0; i < Buttons.Length; i++)
             Buttons[i].SetActive(true);
+
+        if (Ads.NoAds)
+            Buttons[9].SetActive(false); //Ads Button
     }
 
     public void StartButton()
