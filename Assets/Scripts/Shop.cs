@@ -58,10 +58,6 @@ public class Shop : MonoBehaviour
         else
             ChooseWeapon.SetActive(false);
 
-      /*  if (SkinsUnlocked[getIdx()])
-            Debug.Log("Purchased");
-        else
-            Debug.Log("Not Purchased");*/
     }
 
     public void ChooseSkin()

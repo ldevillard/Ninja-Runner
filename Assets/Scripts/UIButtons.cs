@@ -27,10 +27,14 @@ public class UIButtons : MonoBehaviour
     float fpsCount;
     bool fpsDiplay;
 
+    public Text MusicText;
+    public bool dis;
+
     void Start()
     {
         Mine = this;
 
+        dis = false;
         TimeChanger.value = 0.9f;
         fpsDiplay = false;
         CanvasObject.SetActive(false);
@@ -43,12 +47,14 @@ public class UIButtons : MonoBehaviour
 
         if (StartingPoint.StartingGame)
             DisableUI();
+
     }
 
     public void DisableUI()
     {
         for (int i = 0; i < Buttons.Length; i++)
             Buttons[i].SetActive(false);
+        dis = true;
     }
 
     public void ShowUI()
@@ -58,6 +64,8 @@ public class UIButtons : MonoBehaviour
 
         if (Ads.NoAds)
             Buttons[9].SetActive(false); //Ads Button
+
+        dis = false;
     }
 
     public void StartButton()
@@ -67,8 +75,7 @@ public class UIButtons : MonoBehaviour
         Statistics.Mine.NbrPartie++;
         SaveManager.Save();
 
-        for (int i = 0; i < Buttons.Length; i++)
-            Buttons[i].SetActive(false);
+        DisableUI();
 
         Destroy(ButtonStart);
     }
@@ -96,6 +103,14 @@ public class UIButtons : MonoBehaviour
             ScoreText.gameObject.SetActive(false);
 
         CoinsText2.text = Score.CoinPoint + "";
+
+        if (AudioFX.Mine.MusicSource.enabled && !dis)
+        {
+            MusicText.gameObject.SetActive(true);
+            MusicText.text = "" + AudioFX.Mine.Musics[AudioFX.Mine.indexSaver].name;
+        }
+        else
+            MusicText.gameObject.SetActive(false);
     }
 
     IEnumerator DisplayFPS()

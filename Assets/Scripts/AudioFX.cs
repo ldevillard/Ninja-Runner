@@ -9,19 +9,41 @@ public class AudioFX : MonoBehaviour
     public AudioClip Switch, Switch2, Jump, Attack, Spoted, Scream, OpenSettings, Run, Volcano, DiscreteKill, Shop, ShopSelect, PackOpening, OpenChest, GameOver;
     public AudioClip[] Coins;
     public AudioSource SFX;
+
+    public AudioClip[] Musics;
+
     public AudioSource MusicSource;
     public AudioSource RunSource;
 
+    public int indexSaver;
+    
     void Awake()
     {
         Mine = this;
         RunSource.volume = 0;
+
+        indexSaver = -1;
+    }
+
+    void GenerateMusic()
+    {
+        int i;
+
+        while ((i = Random.Range(0, Musics.Length)) == indexSaver)
+            ;
+
+        indexSaver = i;
+
+        MusicSource.PlayOneShot(Musics[i]);
     }
 
     void FixedUpdate()
     {
         if (!RunSource.isPlaying)
             RunSource.PlayOneShot(Run);
+
+        if (!MusicSource.isPlaying && MusicSource.enabled)
+            GenerateMusic();
     }
 
     public void SFXSwitch()

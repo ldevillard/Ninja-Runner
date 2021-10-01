@@ -561,6 +561,7 @@ GameObject:
   - component: {fileID: 964925456}
   - component: {fileID: 964925457}
   - component: {fileID: 964925458}
+  - component: {fileID: 964925459}
   m_Layer: 0
   m_Name: DontDestroy
   m_TagString: Untagged
@@ -606,11 +607,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1187b04e145cf40eb909ae9b99fb4444, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -724,8 +725,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5b4a89a04adab6c47bc7b0f96e1ac05b, type: 3}
   - {fileID: 8300000, guid: b3beceafb07ce0d4aad013c0570bb46b, type: 3}
   SFX: {fileID: 1658169571}
+  Musics:
+  - {fileID: 8300000, guid: 652711ebad6254fc1bc371e95f514ed2, type: 3}
+  - {fileID: 8300000, guid: 1187b04e145cf40eb909ae9b99fb4444, type: 3}
+  - {fileID: 8300000, guid: 013a5f81da8434911ae92ebdd8a55f35, type: 3}
+  - {fileID: 8300000, guid: 4d8738c52de324a1ba52f773032edb8d, type: 3}
   MusicSource: {fileID: 964925456}
   RunSource: {fileID: 1493907465}
+  indexSaver: 0
 --- !u!114 &964925458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +743,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a28191511ffdb4172a4eaaa42bccc325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserName: 
+--- !u!114 &964925459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964925453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68c91c5ae6644811ae44e63a94f8382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &999038416
@@ -1490,7 +1510,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
