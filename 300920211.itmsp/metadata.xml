@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package version="software5.7" xmlns="http://apple.com/itunes/importer">
+  <provider>QW3Y4R2WT2</provider>
+  <team_id>QW3Y4R2WT2</team_id>
+  <software>
+    <vendor_id>300920211</vendor_id>
+    <software_metadata>
+      <in_app_purchases>
+        <in_app_purchase>
+          <product_id>com.logandev.roofninja.coin100</product_id>
+          <reference_name>com.logandev.roofninja.coin100</reference_name>
+          <type>consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>1</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>100 Coins</title>
+              <description>Get 100 coins</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot 2021-10-01 at 16.13.5.png</file_name>
+            <size>383828</size>
+            <checksum>92fe928ad7d4d05eac5562ec97b688ae</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+        <in_app_purchase>
+          <product_id>com.logandev.roofninja.coin500</product_id>
+          <reference_name>com.logandev.roofninja.coin500</reference_name>
+          <type>consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>4</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>500 Coins</title>
+              <description>Get 500 coins</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot 2021-10-01 at 16.13.5.png</file_name>
+            <size>383828</size>
+            <checksum>92fe928ad7d4d05eac5562ec97b688ae</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+        <in_app_purchase>
+          <product_id>com.logandev.roofninja.noads</product_id>
+          <reference_name>com.logandev.roofninja.noads</reference_name>
+          <type>non-consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>2</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>Removing Ads</title>
+              <description>Remove all ads in the game</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot 2021-10-01 at 16.14.0.png</file_name>
+            <size>563929</size>
+            <checksum>41d902340e97d845d25c86d02f07de4a</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+      </in_app_purchases>
+    </software_metadata>
+  </software>
+</package>

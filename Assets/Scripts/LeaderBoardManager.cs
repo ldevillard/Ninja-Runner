@@ -73,7 +73,7 @@ public class LeaderBoardManager : MonoBehaviour
         {
             StatisticName = "Highscore",
             StartPosition = 0,
-            MaxResultsCount = 10
+            MaxResultsCount = 70
         };
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
     }

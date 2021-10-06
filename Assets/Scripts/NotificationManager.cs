@@ -26,6 +26,7 @@ public class NotificationManager : MonoBehaviour
         var notification = new AndroidNotification();
         notification.Title = "Ready ?";
         notification.Text = "The roofs are waiting for you !";
+        notification.SmallIcon = "small_icon";
         notification.FireTime = System.DateTime.Now.AddHours(12);
         notification.RepeatInterval = new System.TimeSpan(12,0,0);
 
