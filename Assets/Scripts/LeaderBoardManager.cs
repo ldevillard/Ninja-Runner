@@ -108,7 +108,7 @@ public class LeaderBoardManager : MonoBehaviour
         Text[] yourTexts = LeaderBoard.Mine.yourRank.GetComponentsInChildren<Text>();
         foreach (var item in result.Leaderboard)
         {
-            if (item.StatValue > 0 && i < 20)
+            if (item.StatValue > 0 && i < 30)
             {
                 GameObject newRank = Instantiate(LeaderBoard.Mine.rankPrefab, LeaderBoard.Mine.rankParent);
                 Text[] texts = newRank.GetComponentsInChildren<Text>();

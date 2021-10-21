@@ -10022,7 +10022,7 @@ MonoBehaviour:
   BloodEffect: {fileID: 4787146697146794734, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
   CDWeapon: 0.2
   swipeRange: 70
-  tapRange: 5
+  tapRange: 100
   CoinEffect: {fileID: 7888857835762348946, guid: 6a7ec4f4e3cb749e0a48bedb2084ba3d, type: 3}
   ArrowTuto: {fileID: 1617581390569167701, guid: be1aa5ef7090948f4b65786e1e9b329f, type: 3}
   PointTuto: {fileID: 496870305394115486, guid: f518169e463e94c2b9ebc5cd01ca77b3, type: 3}

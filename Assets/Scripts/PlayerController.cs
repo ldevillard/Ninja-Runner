@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Mine.GameStarted && isAlive )
+        if (GameManager.Mine.GameStarted && isAlive)
         {
             Swipe();
             ComputerInputs();
@@ -465,18 +465,18 @@ public class PlayerController : MonoBehaviour
          {
              startTouchPosition = Input.GetTouch(0).position;
          }
-     
-         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-         {
-             currentPosition = Input.GetTouch(0).position;
-             Vector2 Distance = currentPosition - startTouchPosition;
-     
-             if (!stopTouch)
-             {
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            currentPosition = Input.GetTouch(0).position;
+            Vector2 Distance = currentPosition - startTouchPosition;
+
+            if (!stopTouch)
+            {
 
                 if (Distance.x < -swipeRange)
                 {
-                    //Debug.Log("Left");
+                    Debug.Log("Left");
 
                     if (Direction == 1)
                         SwitchLeft();
@@ -484,7 +484,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (Distance.x > swipeRange)
                 {
-                   // Debug.Log("Right");
+                    Debug.Log("Right");
 
                     if (Direction == 0)
                         SwitchRight();
@@ -492,24 +492,24 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (Distance.y > swipeRange)
                 {
-                    //Debug.Log("Up");
+                    Debug.Log("Up");
                     if (!inJump && Roof != -1)
                         Jump(JumpForce);
                     else if (PlayerPrefs.HasKey("tuto") == false)
-                        Jump(JumpForce);
+                       Jump(JumpForce);
                     stopTouch = true;
                 }
                 else if (Distance.y < -swipeRange)
                 {
-                    //Debug.Log("Down");
-                    DownDash();
+                    Debug.Log("Down");
+                     DownDash();
                     stopTouch = true;
                 }
-     
-             }
-     
-         }
-         else
+
+            }
+
+        }
+        else
             ResetAnim();
 
          
@@ -523,7 +523,7 @@ public class PlayerController : MonoBehaviour
 
              if (Mathf.Abs(Distance.x) < tapRange && Mathf.Abs(Distance.y) < tapRange)
              {
-                //Debug.Log("Tap");
+                Debug.Log("Tap");
 
                 ThrowWeapon();
             }

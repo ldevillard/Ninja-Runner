@@ -131,4 +131,13 @@ public class UIButtons : MonoBehaviour
     {
         Application.OpenURL("https://linktr.ee/LoganDev");
     }
+
+    public void OpenLeaderBoard()
+    {
+#if UNITY_IOS
+        OpenSceneAdditive(8);
+#elif UNITY_ANDROID
+        PlayGames.Mine.ShowLeaderboard();
+#endif
+    }
 }

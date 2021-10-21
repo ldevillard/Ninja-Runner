@@ -34,6 +34,12 @@ public class LoseScreen : MonoBehaviour
         if (LeaderBoardManager.isLogged)
             LeaderBoardManager.Mine.SendLeaderBoard(Score.HighScore);
 
+#if UNITY_ANDROID
+        PlayGames.Mine.AddScoreToLeaderboard(Score.HighScore);
+        if (Score.HighScore >= 100)
+            PlayGames.Mine.UnlockAchievement();
+#endif
+
         if (Ads.NoAds)
             VideoIcon.sprite = Heart;
     }
