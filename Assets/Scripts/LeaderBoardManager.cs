@@ -73,7 +73,7 @@ public class LeaderBoardManager : MonoBehaviour
         {
             StatisticName = "Highscore",
             StartPosition = 0,
-            MaxResultsCount = 70
+            MaxResultsCount = 100
         };
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
     }
@@ -103,9 +103,12 @@ public class LeaderBoardManager : MonoBehaviour
 
     void OnLeaderboardGet(GetLeaderboardResult result)
     {
+        int i = 0;
+        bool rankInstanced = false;
+        Text[] yourTexts = LeaderBoard.Mine.yourRank.GetComponentsInChildren<Text>();
         foreach (var item in result.Leaderboard)
         {
-            if (item.StatValue > 0)
+            if (item.StatValue > 0 && i < 20)
             {
                 GameObject newRank = Instantiate(LeaderBoard.Mine.rankPrefab, LeaderBoard.Mine.rankParent);
                 Text[] texts = newRank.GetComponentsInChildren<Text>();
@@ -113,22 +116,30 @@ public class LeaderBoardManager : MonoBehaviour
                 texts[1].text = item.DisplayName;
                 texts[2].text = item.StatValue.ToString();
             }
-            if (Score.HighScore == 0)
+            if (Score.HighScore == 0 && !rankInstanced)
             {
-                Text[] yourTexts = LeaderBoard.Mine.yourRank.GetComponentsInChildren<Text>();
+                rankInstanced = true;
                 yourTexts[0].text = "-";
-                yourTexts[1].text = UserName;
-                yourTexts[2].text = "0";
+                //yourTexts[1].text = UserName;
+                //yourTexts[2].text = "0";
             }
-            else if (item.StatValue == Score.HighScore)
+            else if (item.StatValue == Score.HighScore && !rankInstanced)
             {
-                Text[] yourTexts = LeaderBoard.Mine.yourRank.GetComponentsInChildren<Text>();
+                Debug.Log("LOLILOL");
+                rankInstanced = true;
                 yourTexts[0].text = (item.Position + 1).ToString();
-                yourTexts[1].text = item.DisplayName;
-                yourTexts[2].text = item.StatValue.ToString();
+               // yourTexts[1].text = item.DisplayName;
+               // yourTexts[2].text = item.StatValue.ToString();
             }
-
-            Debug.Log(item.Position + " " + item.DisplayName + " " + item.StatValue);
+            LeaderBoard.Mine.LoadingTitle.SetActive(false);
+            i++;
         }
+
+        //Display final box to say to the player that there's other no displayed players
+        GameObject extendRank = Instantiate(LeaderBoard.Mine.rankPrefab, LeaderBoard.Mine.rankParent);
+        Text[] textsExtend = extendRank.GetComponentsInChildren<Text>();
+        textsExtend[0].text = "...";
+        textsExtend[1].text = "...";
+        textsExtend[2].text = "...";
     }
 }

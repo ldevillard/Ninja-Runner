@@ -26,11 +26,17 @@ public class GameManager : MonoBehaviour
         SaveManager.Load("all");
 
         if (PlayerPrefs.HasKey("name"))
+        {
             NameRequestWindow.SetActive(false);
+            if (LeaderBoardManager.isLogged)
+                LeaderBoardManager.Mine.SubmitName();
+        }
     }
 
     public void SetName()
     {
+        if (NameRequest.text.Length < 3)
+            return;
         LeaderBoardManager.Mine.UserName = NameRequest.text;
         PlayerPrefs.SetInt("name", 1);
         SaveManager.Save();

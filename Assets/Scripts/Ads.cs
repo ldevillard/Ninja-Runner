@@ -14,6 +14,8 @@ public class Ads : MonoBehaviour, IUnityAdsListener
     static public bool NoAds;
     public int nbrGame;
 
+    bool reward;
+
 #if UNITY_IOS
     private string gameId = "4380132";
 #elif UNITY_ANDROID
@@ -37,6 +39,8 @@ public class Ads : MonoBehaviour, IUnityAdsListener
             nbrGame = PlayerPrefs.GetInt("counterAds");
         else
             nbrGame = 0;
+
+        reward = false;
     }
 
     public void IncGameCounter()
@@ -54,7 +58,11 @@ public class Ads : MonoBehaviour, IUnityAdsListener
     public void ShowAd()
     {
         if (Advertisement.IsReady("Inter"))
+        {
             Advertisement.Show("Inter");
+            if (AudioFX.Mine.MusicSource.enabled)
+                AudioFX.Mine.MusicSource.mute = true;
+        }
         else
             Debug.Log("Ad can't be shown at the moment!");
     }
@@ -64,6 +72,9 @@ public class Ads : MonoBehaviour, IUnityAdsListener
         // Check if UnityAds ready before calling Show method:
         if (Advertisement.IsReady(mySurfacingId))
         {
+            reward = true;
+            if (AudioFX.Mine.MusicSource.enabled)
+                AudioFX.Mine.MusicSource.mute = true;
             Advertisement.Show(mySurfacingId);
         }
         else
@@ -78,18 +89,28 @@ public class Ads : MonoBehaviour, IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
-            PlayerPrefs.SetInt("res", 1);
-            PlayerPrefs.SetInt("score", Score.ScorePoint);
-            PlayerPrefs.SetFloat("time", Time.timeScale);
-            SceneManager.LoadSceneAsync(1);
+            if (reward)
+            {
+                PlayerPrefs.SetInt("res", 1);
+                PlayerPrefs.SetInt("score", Score.ScorePoint);
+                PlayerPrefs.SetFloat("time", Time.timeScale);
+                SceneManager.LoadSceneAsync(1);
+            
+                reward = false;
+            }
+            if (AudioFX.Mine.MusicSource.enabled)
+                AudioFX.Mine.MusicSource.mute = false;
         }
         else if (showResult == ShowResult.Skipped)
         {
-            // Do not reward the user for skipping the ad.
+            if (AudioFX.Mine.MusicSource.enabled)
+                AudioFX.Mine.MusicSource.mute = false;
         }
         else if (showResult == ShowResult.Failed)
         {
             Debug.LogWarning("The ad did not finish due to an error.");
+            if (AudioFX.Mine.MusicSource.enabled)
+                AudioFX.Mine.MusicSource.mute = false;
         }
     }
 

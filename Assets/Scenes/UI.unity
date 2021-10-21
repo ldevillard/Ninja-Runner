@@ -1560,6 +1560,7 @@ MonoBehaviour:
   - {fileID: 461674389}
   - {fileID: 491349546}
   - {fileID: 1956400613}
+  - {fileID: 892807604}
   CanvasObject: {fileID: 1489916503}
   CoinsText: {fileID: 2108685487}
   CoinsAnim: {fileID: 1489916508}

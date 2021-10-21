@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
@@ -18,18 +18,19 @@ public class LeaderBoard : MonoBehaviour
     public Text Scoretxt;
 
     public GameObject InternetTitle;
+    public GameObject LoadingTitle;
 
     void Start()
     {
         Mine = this;
 
-        if (LeaderBoardManager.isLogged)
-            LeaderBoardManager.Mine.SubmitName();
-
         AudioFX.Mine.SFXSettings();
 
         if (LeaderBoardManager.isLogged)
-            LeaderBoardManager.Mine.GetLeaderBoard();
+        {
+            LoadingTitle.SetActive(true);
+            StartCoroutine(Loader());
+        }
         else
             InternetTitle.SetActive(true);
 
@@ -44,5 +45,11 @@ public class LeaderBoard : MonoBehaviour
         UIButtons.Mine.ShowUI();
         AudioFX.Mine.SFXSettings();
         anim.SetBool("Quit", true);
+    }
+
+    IEnumerator Loader()
+    {
+        yield return new WaitForSeconds(0.25f);
+        LeaderBoardManager.Mine.GetLeaderBoard();
     }
 }
